@@ -1,0 +1,1602 @@
+[
+  {
+    "id": "beijing",
+    "mapName": "Beijing",
+    "nameEn": "Beijing",
+    "nameZh": "北京",
+    "slug": "beijing",
+    "hook": "A city that has been the capital for 800 years straight",
+    "hookData": "Beijing: capital of China since 1271 — longer than any other city on Earth has been a capital",
+    "description": "Beijing isn't just a capital — it's THE capital. 800 years of emperors, revolutions, and now a cyberpunk metropolis.",
+    "videoIds": [],
+    "keywords": [
+      "Beijing",
+      "Beijing travel guide",
+      "Great Wall Beijing",
+      "Forbidden City",
+      "Beijing food"
+    ],
+    "metaTitle": "Beijing — 800 Years as China's Capital | Deep in China",
+    "metaDescription": "Explore Beijing: 800 years as a capital, the Forbidden City, the Great Wall, and a city that reinvents itself every decade.",
+    "coverImage": "",
+    "dataCards": [
+      {
+        "label": "Area",
+        "value": "16,410 km²",
+        "compare": "North China Plain"
+      },
+      {
+        "label": "Population",
+        "value": "21.9 M",
+        "compare": "China's capital"
+      },
+      {
+        "label": "Known for",
+        "value": "Imperial capital",
+        "compare": "Forbidden City & Great Wall"
+      }
+    ],
+    "relatedProvinces": [
+      "hebei",
+      "tianjin",
+      "shanxi",
+      "shandong",
+      "henan"
+    ],
+    "summaryZh": "千年帝都，故宫长城颐和园见证王朝兴衰。胡同里的炸酱面与国贸的摩天楼交织出古今碰撞的北京。"
+  },
+  {
+    "id": "tianjin",
+    "mapName": "Tianjin",
+    "nameEn": "Tianjin",
+    "nameZh": "天津",
+    "slug": "tianjin",
+    "hook": "The port city that once had nine foreign concessions",
+    "hookData": "The port city where nine foreign powers once built their concessions — European architecture meets Chinese harbor grit, 30 minutes from Beijing.",
+    "description": "Tianjin blends European architecture with Chinese harbor energy, all just 30 minutes from Beijing.",
+    "videoIds": [],
+    "keywords": [
+      "Tianjin",
+      "China port city",
+      "Tianjin travel",
+      "European architecture China",
+      "Tianjin food"
+    ],
+    "metaTitle": "Tianjin — Deep in China",
+    "metaDescription": "Tianjin blends European architecture with Chinese harbor energy, all just 30 minutes from Beijing.",
+    "coverImage": "",
+    "dataCards": [
+      {
+        "label": "Area",
+        "value": "11,966 km²",
+        "compare": "Bohai Sea coast"
+      },
+      {
+        "label": "Population",
+        "value": "13.9 M",
+        "compare": "Coastal municipality"
+      },
+      {
+        "label": "Known for",
+        "value": "European concessions",
+        "compare": "Five Avenues"
+      }
+    ],
+    "relatedProvinces": [
+      "beijing",
+      "hebei",
+      "shandong",
+      "henan"
+    ],
+    "summaryZh": "五大道万国建筑博览，天津之眼摩天轮俯瞰海河，狗不理包子配煎饼果子。哏都的幽默烟火气。"
+  },
+  {
+    "id": "hebei",
+    "mapName": "Hebei",
+    "nameEn": "Hebei",
+    "nameZh": "河北",
+    "slug": "hebei",
+    "hook": "The province that surrounds Beijing but nobody visits",
+    "hookData": "The province that wraps around Beijing, home to the most iconic Great Wall stretches and the summer retreat of emperors at Chengde.",
+    "description": "Hebei hides sections of the Great Wall without the crowds, plus ancient mountain villages.",
+    "videoIds": [],
+    "keywords": [
+      "Hebei",
+      "Great Wall China",
+      "Hebei travel",
+      "Chengde travel",
+      "Hebei mountains"
+    ],
+    "metaTitle": "Hebei — Deep in China",
+    "metaDescription": "Hebei hides sections of the Great Wall without the crowds, plus ancient mountain villages.",
+    "coverImage": "",
+    "dataCards": [
+      {
+        "label": "Area",
+        "value": "188,800 km²",
+        "compare": "Wraps Beijing & Tianjin"
+      },
+      {
+        "label": "Population",
+        "value": "74.6 M",
+        "compare": "One of China's largest"
+      },
+      {
+        "label": "Known for",
+        "value": "Great Wall hinterland",
+        "compare": "Chengde resorts"
+      }
+    ],
+    "relatedProvinces": [
+      "beijing",
+      "tianjin",
+      "shanxi",
+      "shandong",
+      "henan",
+      "liaoning",
+      "inner-mongolia"
+    ],
+    "summaryZh": "承德避暑山庄皇家园林，秦皇岛北戴河看日出，白洋淀芦苇荡里荷花香。环绕首都的历史长廊。"
+  },
+  {
+    "id": "shanxi",
+    "mapName": "Shanxi",
+    "nameEn": "Shanxi",
+    "nameZh": "山西",
+    "slug": "shanxi",
+    "hook": "A province with more ancient buildings than all of Europe",
+    "hookData": "The cradle of Chinese commerce — where Ming-dynasty merchants built courtyard mansions and the oldest wooden pagoda on Earth still stands.",
+    "description": "Shanxi has more pre-Ming dynasty wooden buildings than all of Europe combined.",
+    "videoIds": [],
+    "keywords": [
+      "Shanxi",
+      "ancient buildings China",
+      "Shanxi travel",
+      "Pingyao ancient city",
+      "Shanxi temples"
+    ],
+    "metaTitle": "Shanxi — Deep in China",
+    "metaDescription": "Shanxi has more pre-Ming dynasty wooden buildings than all of Europe combined.",
+    "coverImage": "",
+    "dataCards": [
+      {
+        "label": "Area",
+        "value": "156,700 km²",
+        "compare": "Loess Plateau"
+      },
+      {
+        "label": "Population",
+        "value": "34.9 M",
+        "compare": "Cradle of commerce"
+      },
+      {
+        "label": "Known for",
+        "value": "Ancient timber halls",
+        "compare": "Pingyao & Yungang"
+      }
+    ],
+    "relatedProvinces": [
+      "hebei",
+      "shandong",
+      "henan",
+      "shaanxi",
+      "inner-mongolia"
+    ],
+    "summaryZh": "平遥古城穿越明清，云冈石窟千年佛光，五台山清凉圣地。表里山河，地上文物看山西。"
+  },
+  {
+    "id": "inner-mongolia",
+    "mapName": "Inner Mongolia",
+    "nameEn": "Inner Mongolia",
+    "nameZh": "内蒙古",
+    "slug": "inner-mongolia",
+    "hook": "A grassland so big it takes 3 days to drive across",
+    "hookData": "Where the Great Wall meets the grassland — Genghis Khan's legacy lives on in sweeping plains at the Gobi's edge.",
+    "description": "Inner Mongolia's grasslands stretch further than you can imagine, dotted with nomad culture.",
+    "videoIds": [],
+    "keywords": [
+      "Inner Mongolia",
+      "China grassland",
+      "Inner Mongolia travel",
+      "Mongolia nomads",
+      "Genghis Khan"
+    ],
+    "metaTitle": "Inner Mongolia — Deep in China",
+    "metaDescription": "Inner Mongolia's grasslands stretch further than you can imagine, dotted with nomad culture.",
+    "coverImage": "",
+    "dataCards": [
+      {
+        "label": "Area",
+        "value": "1,183,000 km²",
+        "compare": "Gobi edge & steppe"
+      },
+      {
+        "label": "Population",
+        "value": "24.1 M",
+        "compare": "Sparsely populated west"
+      },
+      {
+        "label": "Known for",
+        "value": "Endless grasslands",
+        "compare": "Genghis Khan lore"
+      }
+    ],
+    "relatedProvinces": [
+      "heilongjiang",
+      "jilin",
+      "liaoning",
+      "hebei",
+      "shanxi",
+      "shaanxi",
+      "ningxia",
+      "gansu"
+    ],
+    "summaryZh": "呼伦贝尔大草原一望无际，额济纳胡杨林金秋如画，鄂尔多斯沙漠与绿洲奇迹。马背民族的豪迈天地。"
+  },
+  {
+    "id": "liaoning",
+    "mapName": "Liaoning",
+    "nameEn": "Liaoning",
+    "nameZh": "辽宁",
+    "slug": "liaoning",
+    "hook": "China's first industrial city — and its strangest",
+    "hookData": "The rust-belt heartland turned coastal gateway, where Manchurian history and Korean influence shape a raw, industrial northeast.",
+    "description": "Liaoning was China's first industrial powerhouse, with a mix of Soviet-era factories and imperial palaces.",
+    "videoIds": [],
+    "keywords": [
+      "Liaoning",
+      "Shenyang travel",
+      "Liaoning travel",
+      "Shenyang imperial palace",
+      "China northeast"
+    ],
+    "metaTitle": "Liaoning — Deep in China",
+    "metaDescription": "Liaoning was China's first industrial powerhouse, with a mix of Soviet-era factories and imperial palaces.",
+    "coverImage": "",
+    "dataCards": [
+      {
+        "label": "Area",
+        "value": "148,000 km²",
+        "compare": "Bohai & Yalu River"
+      },
+      {
+        "label": "Population",
+        "value": "42.6 M",
+        "compare": "Mid-sized province"
+      },
+      {
+        "label": "Known for",
+        "value": "Industrial cradle",
+        "compare": "Shenyang palace"
+      }
+    ],
+    "relatedProvinces": [
+      "jilin",
+      "inner-mongolia",
+      "hebei"
+    ],
+    "summaryZh": "沈阳故宫诉说清初历史，大连滨海路浪漫骑行，丹东鸭绿江断桥见证岁月。东北老工业基地的华丽转身。"
+  },
+  {
+    "id": "jilin",
+    "mapName": "Jilin",
+    "nameEn": "Jilin",
+    "nameZh": "吉林",
+    "slug": "jilin",
+    "hook": "The mountain that turns into a frozen waterfall palace every winter",
+    "hookData": "Frozen forests and the crater lake of Changbai Mountain — North Korea at its back, ice festivals at its front.",
+    "description": "Jilin's Rime Island creates ice crystal forests every winter.",
+    "videoIds": [],
+    "keywords": [
+      "Jilin",
+      "Rime Island",
+      "Jilin travel",
+      "China winter",
+      "Jilin ice festival"
+    ],
+    "metaTitle": "Jilin — Deep in China",
+    "metaDescription": "Jilin's Rime Island creates ice crystal forests every winter.",
+    "coverImage": "",
+    "dataCards": [
+      {
+        "label": "Area",
+        "value": "187,400 km²",
+        "compare": "Manchurian plain"
+      },
+      {
+        "label": "Population",
+        "value": "24.1 M",
+        "compare": "Sparse northeast"
+      },
+      {
+        "label": "Known for",
+        "value": "Rime & craters",
+        "compare": "Changbai Mountain"
+      }
+    ],
+    "relatedProvinces": [
+      "heilongjiang",
+      "liaoning",
+      "inner-mongolia"
+    ],
+    "summaryZh": "长白山天池神秘壮美，吉林雾凇如童话世界，延边朝鲜族冷面配烤肉。冰雪王国的热情邀约。"
+  },
+  {
+    "id": "heilongjiang",
+    "mapName": "Heilongjiang",
+    "nameEn": "Heilongjiang",
+    "nameZh": "黑龙江",
+    "slug": "heilongjiang",
+    "hook": "The city where -30°C is a normal winter day",
+    "hookData": "Harbin winter: average -20°C, coldest days hit -40°C",
+    "description": "China's frozen frontier where rivers freeze solid and Harbin builds ice cities.",
+    "videoIds": [],
+    "keywords": [
+      "Heilongjiang",
+      "Harbin ice festival",
+      "China winter travel",
+      "Harbin travel",
+      "ice city China"
+    ],
+    "metaTitle": "Heilongjiang, China — Where -30°C Is Just a Normal Day | Deep in China",
+    "metaDescription": "Discover Heilongjiang: China's frozen frontier where the Harbin Ice Festival builds 30-meter sculptures and -30°C is business as usual.",
+    "coverImage": "",
+    "dataCards": [
+      {
+        "label": "Area",
+        "value": "473,000 km²",
+        "compare": "Amur River frontier"
+      },
+      {
+        "label": "Population",
+        "value": "31.9 M",
+        "compare": "Sparse northeast"
+      },
+      {
+        "label": "Known for",
+        "value": "Ice & snow frontier",
+        "compare": "Harbin Ice Festival"
+      }
+    ],
+    "relatedProvinces": [
+      "jilin",
+      "inner-mongolia"
+    ],
+    "summaryZh": "哈尔滨冰雪大世界梦幻冰雕，漠河北极村看极光，镜泊湖瀑布如银河落九天。中国最北的冰雪奇缘。"
+  },
+  {
+    "id": "shanghai",
+    "mapName": "Shanghai",
+    "nameEn": "Shanghai",
+    "nameZh": "上海",
+    "slug": "shanghai",
+    "hook": "From fishing village to world megacity in 30 years",
+    "hookData": "Shanghai GDP: grew 40x between 1990 and 2025",
+    "description": "No city on Earth has transformed faster than Shanghai.",
+    "videoIds": [],
+    "keywords": [
+      "Shanghai",
+      "Shanghai travel",
+      "Shanghai skyline",
+      "Shanghai food",
+      "Shanghai history"
+    ],
+    "metaTitle": "Shanghai — From Fishing Village to World Megacity in 30 Years | Deep in China",
+    "metaDescription": "Discover Shanghai: the fastest-transforming city on Earth, where colonial architecture meets cyberpunk skyscrapers.",
+    "coverImage": "",
+    "dataCards": [
+      {
+        "label": "Area",
+        "value": "6,340 km²",
+        "compare": "Yangtze River mouth"
+      },
+      {
+        "label": "Population",
+        "value": "24.9 M",
+        "compare": "China's financial hub"
+      },
+      {
+        "label": "Known for",
+        "value": "Global megacity",
+        "compare": "The Bund & Lujiazui"
+      }
+    ],
+    "relatedProvinces": [
+      "jiangsu",
+      "zhejiang",
+      "anhui"
+    ],
+    "summaryZh": "外滩万国建筑群与陆家嘴三件套隔江相望，弄堂里生煎飘香。魔都的每一帧都是赛博朋克现实版。"
+  },
+  {
+    "id": "jiangsu",
+    "mapName": "Jiangsu",
+    "nameEn": "Jiangsu",
+    "nameZh": "江苏",
+    "slug": "jiangsu",
+    "hook": "The city with more gardens than any other on Earth",
+    "hookData": "China's wealthiest classical province — Suzhou's gardens, Nanjing's history, and the Grand Canal that stitched the empire together.",
+    "description": "Suzhou has 60+ classical gardens — UNESCO calls them masterpieces.",
+    "videoIds": [],
+    "keywords": [
+      "Jiangsu",
+      "Suzhou gardens",
+      "Jiangsu travel",
+      "Nanjing travel",
+      "Suzhou travel"
+    ],
+    "metaTitle": "Jiangsu — Deep in China",
+    "metaDescription": "Suzhou has 60+ classical gardens — UNESCO calls them masterpieces.",
+    "coverImage": "",
+    "dataCards": [
+      {
+        "label": "Area",
+        "value": "107,200 km²",
+        "compare": "Yangtze delta"
+      },
+      {
+        "label": "Population",
+        "value": "84.8 M",
+        "compare": "One of China's largest"
+      },
+      {
+        "label": "Known for",
+        "value": "Classical gardens",
+        "compare": "Suzhou gardens"
+      }
+    ],
+    "relatedProvinces": [
+      "shanghai",
+      "zhejiang",
+      "anhui",
+      "shandong",
+      "henan"
+    ],
+    "summaryZh": "苏州园林一步一景，南京梧桐诉说六朝往事，扬州早茶慢煮光阴。江南富庶之地的千年雅韵。"
+  },
+  {
+    "id": "zhejiang",
+    "mapName": "Zhejiang",
+    "nameEn": "Zhejiang",
+    "nameZh": "浙江",
+    "slug": "zhejiang",
+    "hook": "The province that makes everything you buy",
+    "hookData": "The watertown province — West Lake, tea terraces, and the entrepreneurial energy that built modern Chinese e-commerce.",
+    "description": "Zhejiang manufactures more consumer goods than almost anywhere, plus stunning West Lake.",
+    "videoIds": [],
+    "keywords": [
+      "Zhejiang",
+      "Hangzhou travel",
+      "Zhejiang travel",
+      "West Lake",
+      "China e-commerce"
+    ],
+    "metaTitle": "Zhejiang — Deep in China",
+    "metaDescription": "Zhejiang manufactures more consumer goods than almost anywhere, plus stunning West Lake.",
+    "coverImage": "",
+    "dataCards": [
+      {
+        "label": "Area",
+        "value": "105,500 km²",
+        "compare": "Coastal hills"
+      },
+      {
+        "label": "Population",
+        "value": "64.6 M",
+        "compare": "Among China's largest"
+      },
+      {
+        "label": "Known for",
+        "value": "Tea & watertowns",
+        "compare": "West Lake"
+      }
+    ],
+    "relatedProvinces": [
+      "shanghai",
+      "jiangsu",
+      "anhui",
+      "jiangxi",
+      "fujian"
+    ],
+    "summaryZh": "西湖烟雨、乌镇水巷、普陀梵音。浙商精神与江南诗意在这片土地上奇妙融合。"
+  },
+  {
+    "id": "anhui",
+    "mapName": "Anhui",
+    "nameEn": "Anhui",
+    "nameZh": "安徽",
+    "slug": "anhui",
+    "hook": "The mountains that inspired every Chinese painting you've seen",
+    "hookData": "Huangshan's misty peaks inspired every classical Chinese painting you've ever seen; beneath them, villages unchanged for 600 years.",
+    "description": "Anhui's Huangshan is the mountain that defined Chinese art.",
+    "videoIds": [],
+    "keywords": [
+      "Anhui",
+      "Huangshan travel",
+      "Anhui travel",
+      "Yellow Mountain China",
+      "Chinese painting"
+    ],
+    "metaTitle": "Anhui — Deep in China",
+    "metaDescription": "Anhui's Huangshan is the mountain that defined Chinese art.",
+    "coverImage": "",
+    "dataCards": [
+      {
+        "label": "Area",
+        "value": "140,100 km²",
+        "compare": "Yangtze–Huai hills"
+      },
+      {
+        "label": "Population",
+        "value": "61.0 M",
+        "compare": "Among China's largest"
+      },
+      {
+        "label": "Known for",
+        "value": "Huangshan peaks",
+        "compare": "Hongcun village"
+      }
+    ],
+    "relatedProvinces": [
+      "jiangsu",
+      "zhejiang",
+      "jiangxi",
+      "hubei",
+      "henan",
+      "shandong"
+    ],
+    "summaryZh": "黄山归来不看岳，宏村水墨画般的徽派建筑，合肥科技新城。山水与科创的完美邂逅。"
+  },
+  {
+    "id": "fujian",
+    "mapName": "Fujian",
+    "nameEn": "Fujian",
+    "nameZh": "福建",
+    "slug": "fujian",
+    "hook": "Houses built to survive nuclear blasts",
+    "hookData": "Tulou earth buildings: withstand earthquakes up to magnitude 7, built 600+ years ago",
+    "description": "Fujian's Hakka tulou are round fortress-houses built from earth.",
+    "videoIds": [],
+    "keywords": [
+      "Fujian",
+      "Hakka tulou",
+      "Fujian travel",
+      "earth buildings China",
+      "Fujian culture"
+    ],
+    "metaTitle": "Fujian, China — Houses Built to Survive Nuclear Blasts | Deep in China",
+    "metaDescription": "Discover Fujian: Hakka tulou earth fortresses that withstand magnitude 7 earthquakes, coastal tea culture, and island villages.",
+    "coverImage": "",
+    "dataCards": [
+      {
+        "label": "Area",
+        "value": "124,000 km²",
+        "compare": "Taiwan Strait coast"
+      },
+      {
+        "label": "Population",
+        "value": "41.5 M",
+        "compare": "Mid-sized coastal"
+      },
+      {
+        "label": "Known for",
+        "value": "Hakka tulou",
+        "compare": "Gulangyu Island"
+      }
+    ],
+    "relatedProvinces": [
+      "zhejiang",
+      "jiangxi",
+      "guangdong",
+      "taiwan"
+    ],
+    "summaryZh": "鼓浪屿钢琴声飘过海面，武夷山九曲溪竹筏漂流，土楼里客家人围炉夜话。",
+    "hotspot": {
+      "title": "Fujian: round earthen towers that hid whole clans",
+      "summary": "Fujian’s tulou earthen towers once sheltered entire clans behind circular rammed-earth walls, while its granite coast turned fishing villages into cities built on the sea.",
+      "updated": "2026-07-19"
+    }
+  },
+  {
+    "id": "jiangxi",
+    "mapName": "Jiangxi",
+    "nameEn": "Jiangxi",
+    "nameZh": "江西",
+    "slug": "jiangxi",
+    "hook": "The porcelain that changed the world came from here",
+    "hookData": "The porcelain capital of the world — Jingdezhen fired China's name onto ceramics for a thousand years.",
+    "description": "Jingdezhen in Jiangxi invented porcelain 1,000 years ago.",
+    "videoIds": [],
+    "keywords": [
+      "Jiangxi",
+      "Jingdezhen porcelain",
+      "Jiangxi travel",
+      "China porcelain",
+      "Jingdezhen travel"
+    ],
+    "metaTitle": "Jiangxi — Deep in China",
+    "metaDescription": "Jingdezhen in Jiangxi invented porcelain 1,000 years ago.",
+    "coverImage": "",
+    "dataCards": [
+      {
+        "label": "Area",
+        "value": "166,900 km²",
+        "compare": "Poyang Lake basin"
+      },
+      {
+        "label": "Population",
+        "value": "45.2 M",
+        "compare": "Mid-sized province"
+      },
+      {
+        "label": "Known for",
+        "value": "Porcelain cradle",
+        "compare": "Jingdezhen"
+      }
+    ],
+    "relatedProvinces": [
+      "anhui",
+      "hubei",
+      "hunan",
+      "guangdong",
+      "fujian"
+    ],
+    "summaryZh": "庐山瀑布飞流直下，景德镇千年瓷都窑火不熄，婺源油菜花海如金色油画。赣鄱大地的诗意栖居。"
+  },
+  {
+    "id": "shandong",
+    "mapName": "Shandong",
+    "nameEn": "Shandong",
+    "nameZh": "山东",
+    "slug": "shandong",
+    "hook": "Confucius was born here — and his ideas still run the country",
+    "hookData": "Confucius's homeland — the birthplace of Chinese philosophy, with cliffs plunging into the Yellow Sea.",
+    "description": "Shandong is the birthplace of Confucianism and home to China's most sacred mountain.",
+    "videoIds": [],
+    "keywords": [
+      "Shandong",
+      "Confucius birthplace",
+      "Shandong travel",
+      "Mount Tai",
+      "Qufu travel"
+    ],
+    "metaTitle": "Shandong — Deep in China",
+    "metaDescription": "Shandong is the birthplace of Confucianism and home to China's most sacred mountain.",
+    "coverImage": "",
+    "dataCards": [
+      {
+        "label": "Area",
+        "value": "157,100 km²",
+        "compare": "Yellow Sea coast"
+      },
+      {
+        "label": "Population",
+        "value": "101.5 M",
+        "compare": "China's 2nd most populous"
+      },
+      {
+        "label": "Known for",
+        "value": "Confucian homeland",
+        "compare": "Mount Tai"
+      }
+    ],
+    "relatedProvinces": [
+      "hebei",
+      "henan",
+      "anhui",
+      "jiangsu"
+    ],
+    "summaryZh": "泰山日出、曲阜三孔、青岛啤酒节。齐鲁大地，孔孟之乡，既有文化厚重又有海滨浪漫。"
+  },
+  {
+    "id": "henan",
+    "mapName": "Henan",
+    "nameEn": "Henan",
+    "nameZh": "河南",
+    "slug": "henan",
+    "hook": "The province where Chinese civilization began",
+    "hookData": "The middle of the Middle Kingdom — more dynasties rose and fell here than anywhere else on Earth.",
+    "description": "Henan is where writing, philosophy, and the first dynasty started.",
+    "videoIds": [],
+    "keywords": [
+      "Henan",
+      "China civilization origin",
+      "Henan travel",
+      "Luoyang travel",
+      "Shaolin Temple"
+    ],
+    "metaTitle": "Henan — Deep in China",
+    "metaDescription": "Henan is where writing, philosophy, and the first dynasty started.",
+    "coverImage": "",
+    "dataCards": [
+      {
+        "label": "Area",
+        "value": "167,000 km²",
+        "compare": "Central plains"
+      },
+      {
+        "label": "Population",
+        "value": "99.4 M",
+        "compare": "China's 3rd most populous"
+      },
+      {
+        "label": "Known for",
+        "value": "Cradle of civilization",
+        "compare": "Shaolin Temple"
+      }
+    ],
+    "relatedProvinces": [
+      "hebei",
+      "shanxi",
+      "shaanxi",
+      "hubei",
+      "anhui",
+      "shandong"
+    ],
+    "summaryZh": "少林寺功夫闻名天下，洛阳牡丹花开时节动京城，开封清明上河园穿越千年。中原文化的根。"
+  },
+  {
+    "id": "hubei",
+    "mapName": "Hubei",
+    "nameEn": "Hubei",
+    "nameZh": "湖北",
+    "slug": "hubei",
+    "hook": "The city that split a river in two",
+    "hookData": "Wuhan's Yangtze crossroads — where the world's longest river meets a lake system feeding the great plains.",
+    "description": "Wuhan sits where the Yangtze meets the Han river.",
+    "videoIds": [],
+    "keywords": [
+      "Hubei",
+      "Wuhan travel",
+      "Hubei travel",
+      "Yangtze river",
+      "Wuhan university"
+    ],
+    "metaTitle": "Hubei — Deep in China",
+    "metaDescription": "Wuhan sits where the Yangtze meets the Han river.",
+    "coverImage": "",
+    "dataCards": [
+      {
+        "label": "Area",
+        "value": "185,900 km²",
+        "compare": "Yangtze midpoint"
+      },
+      {
+        "label": "Population",
+        "value": "57.8 M",
+        "compare": "Among China's largest"
+      },
+      {
+        "label": "Known for",
+        "value": "Yangtze crossroads",
+        "compare": "Wuhan & Yangtze"
+      }
+    ],
+    "relatedProvinces": [
+      "henan",
+      "anhui",
+      "jiangxi",
+      "hunan",
+      "chongqing",
+      "shaanxi"
+    ],
+    "summaryZh": "武当山太极晨练，神农架野人传说，武汉过早热干面配蛋酒。长江与汉江交汇处的江湖气。"
+  },
+  {
+    "id": "hunan",
+    "mapName": "Hunan",
+    "nameEn": "Hunan",
+    "nameZh": "湖南",
+    "slug": "hunan",
+    "hook": "This province's food is spicier than India's",
+    "hookData": "Hunan chili consumption per capita exceeds India",
+    "description": "If you thought India was the spiciest place on Earth, you haven't been to Hunan.",
+    "videoIds": [],
+    "keywords": [
+      "Hunan",
+      "China spicy food",
+      "Changsha travel",
+      "Hunan travel guide",
+      "Hunan cuisine"
+    ],
+    "metaTitle": "Hunan, China — Where the Food Out-Spices India | Deep in China",
+    "metaDescription": "Discover Hunan: a province where the food is hotter than anything in India, home to revolutionary history and stunning mountain landscapes.",
+    "coverImage": "",
+    "dataCards": [
+      {
+        "label": "Area",
+        "value": "211,800 km²",
+        "compare": "Xiang River basin"
+      },
+      {
+        "label": "Population",
+        "value": "66.4 M",
+        "compare": "Among China's largest"
+      },
+      {
+        "label": "Known for",
+        "value": "Fiery cuisine",
+        "compare": "Zhangjiajie peaks"
+      }
+    ],
+    "relatedProvinces": [
+      "hubei",
+      "jiangxi",
+      "guangdong",
+      "guangxi",
+      "guizhou",
+      "chongqing"
+    ],
+    "summaryZh": "张家界悬浮山是阿凡达取景地，长沙臭豆腐配茶颜悦色，岳麓书院千年书香。"
+  },
+  {
+    "id": "guangdong",
+    "mapName": "Guangdong",
+    "nameEn": "Guangdong",
+    "nameZh": "广东",
+    "slug": "guangdong",
+    "hook": "The province that eats everything",
+    "hookData": "The Cantonese motherland — dim sum, the Pearl River Delta, and the diaspora that carried Chinese food worldwide.",
+    "description": "Guangdong's Cantonese cuisine has a saying: anything that moves, we eat it.",
+    "videoIds": [],
+    "keywords": [
+      "Guangdong",
+      "Cantonese food",
+      "Guangdong travel",
+      "Guangzhou travel",
+      "Dim sum"
+    ],
+    "metaTitle": "Guangdong — Deep in China",
+    "metaDescription": "Guangdong's Cantonese cuisine has a saying: anything that moves, we eat it.",
+    "coverImage": "",
+    "dataCards": [
+      {
+        "label": "Area",
+        "value": "179,700 km²",
+        "compare": "Pearl River delta"
+      },
+      {
+        "label": "Population",
+        "value": "126.0 M",
+        "compare": "China's most populous"
+      },
+      {
+        "label": "Known for",
+        "value": "Cantonese food",
+        "compare": "Cantonese cuisine"
+      }
+    ],
+    "relatedProvinces": [
+      "fujian",
+      "jiangxi",
+      "hunan",
+      "guangxi",
+      "hong-kong",
+      "macao",
+      "hainan"
+    ],
+    "summaryZh": "从广州早茶到深圳科技园，从潮汕牛肉火锅到珠海情侣路。粤式烟火气与湾区速度并存。"
+  },
+  {
+    "id": "guangxi",
+    "mapName": "Guangxi",
+    "nameEn": "Guangxi",
+    "nameZh": "广西",
+    "slug": "guangxi",
+    "hook": "The giant sinkholes nobody talks about",
+    "hookData": "Leye Tiankeng Group: 29 massive sinkholes, the largest cluster on Earth",
+    "description": "Guangxi hides the world's largest cluster of giant sinkholes.",
+    "videoIds": [],
+    "keywords": [
+      "Guangxi",
+      "China sinkholes",
+      "Guilin travel",
+      "Guangxi karst",
+      "Leye Tiankeng"
+    ],
+    "metaTitle": "Guangxi, China — Giant Sinkholes With Forests Inside | Deep in China",
+    "metaDescription": "Explore Guangxi: giant sinkholes with entire forests growing inside, the famous karst landscapes of Guilin, and ethnic Zhuang culture.",
+    "coverImage": "",
+    "dataCards": [
+      {
+        "label": "Area",
+        "value": "237,600 km²",
+        "compare": "Karst & border"
+      },
+      {
+        "label": "Population",
+        "value": "50.1 M",
+        "compare": "Mid-sized province"
+      },
+      {
+        "label": "Known for",
+        "value": "Karst wonderland",
+        "compare": "Guilin karst"
+      }
+    ],
+    "relatedProvinces": [
+      "hunan",
+      "guangdong",
+      "guizhou",
+      "yunnan"
+    ],
+    "summaryZh": "桂林山水甲天下，阳朔西街啤酒鱼，涠洲岛火山地貌。漓江竹筏划过20元人民币背面。"
+  },
+  {
+    "id": "hainan",
+    "mapName": "Hainan",
+    "nameEn": "Hainan",
+    "nameZh": "海南",
+    "slug": "hainan",
+    "hook": "China's secret tropical island most foreigners never visit",
+    "hookData": "Hainan: 25°C average year-round, 1,500km coastline, visa-free for 59 countries",
+    "description": "Hainan is China's Hawaii — yet most Western tourists have never heard of it.",
+    "videoIds": [],
+    "keywords": [
+      "Hainan China",
+      "China tropical island",
+      "Hainan travel",
+      "Sanya beach",
+      "visa-free China"
+    ],
+    "metaTitle": "Hainan, China — The Tropical Island Most Foreigners Never Visit | Deep in China",
+    "metaDescription": "Discover Hainan, China: a tropical island with visa-free entry, pristine beaches, and rainforests — yet most Western tourists haven't heard of it.",
+    "coverImage": "",
+    "dataCards": [
+      {
+        "label": "Area",
+        "value": "35,400 km²",
+        "compare": "South China Sea island"
+      },
+      {
+        "label": "Population",
+        "value": "10.1 M",
+        "compare": "Sparse island"
+      },
+      {
+        "label": "Known for",
+        "value": "Tropical isle",
+        "compare": "Sanya beaches"
+      }
+    ],
+    "relatedProvinces": [
+      "guangdong",
+      "guangxi"
+    ],
+    "summaryZh": "三亚椰风海浪，海口骑楼老街南洋风情，文昌航天发射场仰望星空。热带海岛度假天堂。"
+  },
+  {
+    "id": "chongqing",
+    "mapName": "Chongqing",
+    "nameEn": "Chongqing",
+    "nameZh": "重庆",
+    "slug": "chongqing",
+    "hook": "In this city, your neighbor's roof is your road",
+    "hookData": "Navigation apps regularly fail here — it's an 8D city",
+    "description": "Chongqing breaks every rule of urban planning. Roads on rooftops, buildings stacked 20 layers deep.",
+    "videoIds": [
+      "vHnChq2XrBE"
+    ],
+    "keywords": [
+      "Chongqing",
+      "8D city China",
+      "Chongqing travel",
+      "Chongqing food",
+      "cyberpunk city"
+    ],
+    "metaTitle": "Chongqing — The 8D City Where GPS Gives Up | Deep in China",
+    "metaDescription": "Visit Chongqing: a city where roads run on rooftops, buildings stack 20 layers deep, and navigation apps admit defeat.",
+    "coverImage": "https://i.ytimg.com/vi/vHnChq2XrBE/hqdefault.jpg",
+    "dataCards": [
+      {
+        "label": "Area",
+        "value": "82,400 km²",
+        "compare": "Yangtze gorges"
+      },
+      {
+        "label": "Population",
+        "value": "32.0 M",
+        "compare": "Western municipality"
+      },
+      {
+        "label": "Known for",
+        "value": "8D mountain city",
+        "compare": "Hongyadong"
+      }
+    ],
+    "relatedProvinces": [
+      "hubei",
+      "hunan",
+      "guizhou",
+      "sichuan",
+      "shaanxi"
+    ],
+    "hotspot": {
+      "title": "重庆 8D 魔幻地形又成全网梗",
+      "summary": "穿楼轻轨、空中立交、倒挂的居民楼——重庆的 8D 地形一次次火出圈，海外博主直呼超现实。点进去看正经航拍。",
+      "image": "assets/img/YouTube_channel_art_banner__wi_2026-07-18T21-21-51.png",
+      "updated": "2026-07-19"
+    },
+    "summaryZh": "8D魔幻山城，轻轨穿楼而过，洪崖洞夜景如千与千寻。火锅必须是九宫格才够味。",
+    "guide": {
+      "bestTime": "March to May and September to November are ideal — mild weather, clear skies for the mountain city views. Avoid July–August (brutal humidity, 40°C+ rooftop heat) and the foggy winter stretch when the 8D skyline hides.",
+      "getThere": "Fly into Chongqing Jiangbei International Airport (CKG), 30 min by metro line 3/10 to the center. High-speed rail links Beijing (≈7h), Chengdu (≈1.5h) and Xi'an (≈5h). The metro itself is the attraction — line 2 literally passes through a residential building at Liziba.",
+      "itinerary": [
+        "Day 1 — Liziba (train-through-building) → Eling Park for the 8D skyline → Hongyadong at dusk for the 'Spirited Away' stilt houses",
+        "Day 2 — Ciqikou ancient town → Yangtze River cable car → Nanbin Road night walk",
+        "Day 3 — Wulong Karst (Tianlong bridge, Natural Three Bridges) day trip, or Yangtze cable car + Gele Mountain"
+      ],
+      "food": [
+        "Nine-grid hotpot (九宫格火锅) — split broths by spice level, numb-and-spicy is the local default",
+        "Xiaomian (重庆小面) — 6am street noodles, the real breakfast of champions",
+        "Chongqing chicken with peanuts (歌乐山辣子鸡) — hunt the chicken through a mountain of dried chili"
+      ],
+      "hiddenGems": [
+        "Huangjueping staircase streets — a vertical maze of staircases where your GPS gives up, perfect for cyberpunk photos",
+        "Testbed 2 (贰厂) — a converted wartime printing factory, now indie cafés and art squats with rooftop city views"
+      ]
+    },
+    "affiliate": {
+      "booking": "https://www.booking.com/searchresults.html?city=20016836&name=Chongqing",
+      "tripcom": "https://www.trip.com/hotels/chongqing-hotels-list/",
+      "ctrip": "https://hotels.ctrip.com/hotel/chongqing1"
+    }
+  },
+  {
+    "id": "sichuan",
+    "mapName": "Sichuan",
+    "nameEn": "Sichuan",
+    "nameZh": "四川",
+    "slug": "sichuan",
+    "hook": "Why Sichuan's food is so spicy even locals can't handle it",
+    "hookData": "Chili consumption per capita: highest on Earth. Average life expectancy: 81.3 years",
+    "description": "Home to the world's spiciest food, ancient Buddhist mountains, and pandas.",
+    "videoIds": [],
+    "keywords": [
+      "Sichuan",
+      "China spicy food",
+      "Mount Emei",
+      "Chengdu travel",
+      "Sichuan travel guide"
+    ],
+    "metaTitle": "Sichuan, China — Why This Province Defies Every Expectation | Deep in China",
+    "metaDescription": "Discover Sichuan: the world's spiciest food, sacred Buddhist mountains, pandas, and a city where people live longer than anywhere else in China.",
+    "coverImage": "",
+    "dataCards": [
+      {
+        "label": "Area",
+        "value": "486,000 km²",
+        "compare": "Sichuan Basin & plateau"
+      },
+      {
+        "label": "Population",
+        "value": "83.7 M",
+        "compare": "One of China's largest"
+      },
+      {
+        "label": "Known for",
+        "value": "Pandas & spice",
+        "compare": "Mount Emei & pandas"
+      }
+    ],
+    "relatedProvinces": [
+      "chongqing",
+      "guizhou",
+      "yunnan",
+      "tibet",
+      "qinghai",
+      "gansu",
+      "shaanxi"
+    ],
+    "summaryZh": "熊猫故乡、川菜之魂、九寨沟仙境。一锅红油翻滚的火锅，就是四川人的生活哲学。",
+    "hotspot": {
+      "title": "Sichuan: panda homeland & the capital of mala chili",
+      "summary": "Sichuan is where giant pandas were first studied in the wild and where the numbing mala flavor was born — a province where Himalayan foothills, the red Sichuan basin and a fiery cuisine all collide.",
+      "updated": "2026-07-19"
+    }
+  },
+  {
+    "id": "guizhou",
+    "mapName": "Guizhou",
+    "nameEn": "Guizhou",
+    "nameZh": "贵州",
+    "slug": "guizhou",
+    "hook": "The city built inside a mountain",
+    "hookData": "Guizhou has more bridges than any other province on Earth",
+    "description": "A province where entire cities are carved into cliffs and bridges span impossible canyons.",
+    "videoIds": [],
+    "keywords": [
+      "Guizhou",
+      "China hidden province",
+      "Guizhou bridges",
+      "Guizhou travel",
+      "cliff city China"
+    ],
+    "metaTitle": "Guizhou, China — The Province Where Cities Hang From Cliffs | Deep in China",
+    "metaDescription": "Explore Guizhou: cliff-hanging cities, the world's most bridges, and ethnic minority cultures untouched by modern China.",
+    "coverImage": "",
+    "dataCards": [
+      {
+        "label": "Area",
+        "value": "176,000 km²",
+        "compare": "Karst plateau"
+      },
+      {
+        "label": "Population",
+        "value": "38.6 M",
+        "compare": "Mid-sized plateau"
+      },
+      {
+        "label": "Known for",
+        "value": "Cliff-hanging towns",
+        "compare": "Huangguoshu Falls"
+      }
+    ],
+    "relatedProvinces": [
+      "chongqing",
+      "hunan",
+      "guangxi",
+      "yunnan",
+      "sichuan"
+    ],
+    "summaryZh": "黄果树瀑布亚洲第一，千户苗寨万家灯火，荔波小七孔地球腰带上的绿宝石。黔山秀水间的多彩民族风。"
+  },
+  {
+    "id": "yunnan",
+    "mapName": "Yunnan",
+    "nameEn": "Yunnan",
+    "nameZh": "云南",
+    "slug": "yunnan",
+    "hook": "25 ethnic groups, 25 languages, one province",
+    "hookData": "Naxi Dongba script: the world's only living pictographic writing system",
+    "description": "Yunnan holds more ethnic diversity than anywhere else in China.",
+    "videoIds": [],
+    "keywords": [
+      "Yunnan",
+      "China ethnic groups",
+      "Yunnan travel",
+      "Kunming travel",
+      "Yunnan minorities"
+    ],
+    "metaTitle": "Yunnan, China — 25 Ethnic Groups in One Province | Deep in China",
+    "metaDescription": "Explore Yunnan: 25 ethnic minorities, the world's only living pictographic language, and landscapes that range from tropical to alpine.",
+    "coverImage": "",
+    "dataCards": [
+      {
+        "label": "Area",
+        "value": "394,100 km²",
+        "compare": "Himalayan foothills"
+      },
+      {
+        "label": "Population",
+        "value": "47.2 M",
+        "compare": "Mid-sized southwest"
+      },
+      {
+        "label": "Known for",
+        "value": "Ethnic mosaic",
+        "compare": "Lijiang old town"
+      }
+    ],
+    "relatedProvinces": [
+      "sichuan",
+      "guizhou",
+      "guangxi",
+      "tibet"
+    ],
+    "summaryZh": "丽江古城听民谣，大理洱海看苍山，西双版纳热带雨林。彩云之南，来了就不想走。",
+    "hotspot": {
+      "title": "Yunnan: one province, half of Asia’s climates",
+      "summary": "Yunnan stacks snow peaks, tropical valleys and 25 ethnic groups into one province — you can chase spring, summer and autumn on one road trip, from Shangri-La down to the rice terraces of Yuanyang.",
+      "updated": "2026-07-19"
+    }
+  },
+  {
+    "id": "tibet",
+    "mapName": "Tibet",
+    "nameEn": "Tibet, China",
+    "nameZh": "西藏",
+    "slug": "tibet",
+    "hook": "The highest city on Earth sits at 3,650 meters",
+    "hookData": "Lhasa elevation: 3,650m — compare to Denver (1,600m) or Mexico City (2,240m)",
+    "description": "Tibet, China is the roof of the world, home to Everest and ancient monasteries.",
+    "videoIds": [],
+    "keywords": [
+      "Tibet China",
+      "Lhasa travel",
+      "Tibet travel guide",
+      "Potala Palace",
+      "high altitude city"
+    ],
+    "metaTitle": "Tibet, China — The Highest City on Earth at 3,650m | Deep in China",
+    "metaDescription": "Discover Tibet, China: the roof of the world, where Lhasa sits at 3,650 meters and ancient monasteries overlook turquoise lakes.",
+    "coverImage": "",
+    "dataCards": [
+      {
+        "label": "Area",
+        "value": "1,228,400 km²",
+        "compare": "Tibetan Plateau"
+      },
+      {
+        "label": "Population",
+        "value": "3.6 M",
+        "compare": "China's least populous"
+      },
+      {
+        "label": "Known for",
+        "value": "Roof of the world",
+        "compare": "Potala Palace"
+      }
+    ],
+    "relatedProvinces": [
+      "sichuan",
+      "yunnan",
+      "qinghai",
+      "xinjiang"
+    ],
+    "summaryZh": "布达拉宫巍然矗立，纳木错湖水如天。世界屋脊上的信仰之旅，此生必去的心灵高地。"
+  },
+  {
+    "id": "shaanxi",
+    "mapName": "Shaanxi",
+    "nameEn": "Shaanxi",
+    "nameZh": "陕西",
+    "slug": "shaanxi",
+    "hook": "The city where 13 dynasties ruled — and left 5,000 years of treasure",
+    "hookData": "The starting point of the Silk Road — Xi'an's terracotta army guards the capital of thirteen dynasties.",
+    "description": "Xi'an was capital for 13 dynasties over 1,100 years.",
+    "videoIds": [],
+    "keywords": [
+      "Shaanxi",
+      "Xi'an travel",
+      "Shaanxi travel",
+      "Terracotta Army",
+      "Silk Road China"
+    ],
+    "metaTitle": "Shaanxi — Deep in China",
+    "metaDescription": "Xi'an was capital for 13 dynasties over 1,100 years.",
+    "coverImage": "",
+    "dataCards": [
+      {
+        "label": "Area",
+        "value": "205,600 km²",
+        "compare": "Wei River valley"
+      },
+      {
+        "label": "Population",
+        "value": "39.5 M",
+        "compare": "Mid-sized province"
+      },
+      {
+        "label": "Known for",
+        "value": "Silk Road start",
+        "compare": "Terracotta Army"
+      }
+    ],
+    "relatedProvinces": [
+      "shanxi",
+      "inner-mongolia",
+      "ningxia",
+      "gansu",
+      "sichuan",
+      "chongqing",
+      "henan",
+      "hubei"
+    ],
+    "summaryZh": "兵马俑千年守护秦始皇，回民街羊肉泡馍热气腾腾。十三朝古都的地底下全是故事。"
+  },
+  {
+    "id": "gansu",
+    "mapName": "Gansu",
+    "nameEn": "Gansu",
+    "nameZh": "甘肃",
+    "slug": "gansu",
+    "hook": "This province invented noodles and then forgot to tell the world",
+    "hookData": "Lanzhou beef noodles: invented here 200+ years ago, now eaten worldwide",
+    "description": "Gansu is where the Silk Road began, with rainbow mountains and desert monasteries.",
+    "videoIds": [],
+    "keywords": [
+      "Gansu",
+      "Silk Road China",
+      "Lanzhou noodles",
+      "Danxia mountains",
+      "Gansu travel"
+    ],
+    "metaTitle": "Gansu, China — Where Noodles Were Born and Rainbow Mountains Rise | Deep in China",
+    "metaDescription": "Explore Gansu: the Silk Road gateway, rainbow-colored Danxia mountains, and the birthplace of Lanzhou beef noodles.",
+    "coverImage": "",
+    "dataCards": [
+      {
+        "label": "Area",
+        "value": "425,800 km²",
+        "compare": "Hexi Corridor"
+      },
+      {
+        "label": "Population",
+        "value": "25.0 M",
+        "compare": "Sparse western"
+      },
+      {
+        "label": "Known for",
+        "value": "Rainbow mountains",
+        "compare": "Mogao Caves"
+      }
+    ],
+    "relatedProvinces": [
+      "inner-mongolia",
+      "ningxia",
+      "qinghai",
+      "xinjiang",
+      "shaanxi",
+      "sichuan"
+    ],
+    "summaryZh": "敦煌莫高窟千年壁画，张掖丹霞七彩地貌，兰州牛肉面一碗解千愁。丝绸之路上的历史长卷。"
+  },
+  {
+    "id": "qinghai",
+    "mapName": "Qinghai",
+    "nameEn": "Qinghai",
+    "nameZh": "青海",
+    "slug": "qinghai",
+    "hook": "The lake that looks like the ocean but is 3,200m above sea level",
+    "hookData": "The source of Asia's great rivers — Tibetan plateau lakes and the railway to the roof of the world.",
+    "description": "Qinghai Lake: China's largest lake, sitting at 3,200m altitude.",
+    "videoIds": [],
+    "keywords": [
+      "Qinghai",
+      "Qinghai Lake",
+      "Qinghai travel",
+      "Tibet plateau",
+      "China lake"
+    ],
+    "metaTitle": "Qinghai — Deep in China",
+    "metaDescription": "Qinghai Lake: China's largest lake, sitting at 3,200m altitude.",
+    "coverImage": "",
+    "dataCards": [
+      {
+        "label": "Area",
+        "value": "722,300 km²",
+        "compare": "Qinghai–Tibet plateau"
+      },
+      {
+        "label": "Population",
+        "value": "5.9 M",
+        "compare": "Sparse plateau"
+      },
+      {
+        "label": "Known for",
+        "value": "High plateau lake",
+        "compare": "Qinghai Lake"
+      }
+    ],
+    "relatedProvinces": [
+      "gansu",
+      "xinjiang",
+      "tibet",
+      "sichuan"
+    ],
+    "summaryZh": "青海湖油菜花海环湖骑行，茶卡盐湖天空之镜，塔尔寺藏传佛教圣地。高原净土的心灵洗礼。"
+  },
+  {
+    "id": "ningxia",
+    "mapName": "Ningxia",
+    "nameEn": "Ningxia",
+    "nameZh": "宁夏",
+    "slug": "ningxia",
+    "hook": "The smallest province with the biggest wine",
+    "hookData": "The forgotten kingdom of the Western Xia — desert, wine country, and the Yellow River bending through Hui Muslim heartland.",
+    "description": "Ningxia produces China's best wine from desert vineyards.",
+    "videoIds": [],
+    "keywords": [
+      "Ningxia",
+      "China wine",
+      "Ningxia travel",
+      "Desert vineyard",
+      "Yellow River"
+    ],
+    "metaTitle": "Ningxia — Deep in China",
+    "metaDescription": "Ningxia produces China's best wine from desert vineyards.",
+    "coverImage": "",
+    "dataCards": [
+      {
+        "label": "Area",
+        "value": "66,400 km²",
+        "compare": "Yellow River bend"
+      },
+      {
+        "label": "Population",
+        "value": "7.2 M",
+        "compare": "China's smallest province"
+      },
+      {
+        "label": "Known for",
+        "value": "Desert vineyards",
+        "compare": "Western Xia tombs"
+      }
+    ],
+    "relatedProvinces": [
+      "inner-mongolia",
+      "gansu",
+      "shaanxi"
+    ],
+    "summaryZh": "沙坡头黄河与沙漠共舞，西夏王陵东方金字塔，镇北堡影视城大话西游取景地。塞上江南的别样风光。"
+  },
+  {
+    "id": "xinjiang",
+    "mapName": "Xinjiang",
+    "nameEn": "Xinjiang, China",
+    "nameZh": "新疆",
+    "slug": "xinjiang",
+    "hook": "China's largest province is bigger than 16 UKs combined",
+    "hookData": "Area: 1.66 million km² — bigger than 16 United Kingdoms",
+    "description": "A vast land of deserts, mountains, and ancient Silk Road cities.",
+    "videoIds": [],
+    "keywords": [
+      "Xinjiang China",
+      "Silk Road travel",
+      "Xinjiang desert",
+      "Urumqi travel",
+      "Xinjiang travel guide"
+    ],
+    "metaTitle": "Xinjiang, China — A Province Bigger Than 16 UKs | Deep in China",
+    "metaDescription": "Discover Xinjiang, China: a province so vast it dwarfs entire countries, where the Silk Road still lives in desert cities and mountain valleys.",
+    "coverImage": "",
+    "dataCards": [
+      {
+        "label": "Area",
+        "value": "1,660,000 km²",
+        "compare": "Tian Shan & Tarim"
+      },
+      {
+        "label": "Population",
+        "value": "25.9 M",
+        "compare": "Sparse western"
+      },
+      {
+        "label": "Known for",
+        "value": "Silk Road expanse",
+        "compare": "Taklamakan edge"
+      }
+    ],
+    "relatedProvinces": [
+      "gansu",
+      "qinghai",
+      "tibet"
+    ],
+    "summaryZh": "喀纳斯湖怪传说、吐鲁番葡萄沟、喀什古城异域风情。占中国六分之一土地的极致风光。",
+    "hotspot": {
+      "title": "Xinjiang, China: four seasons on one highway",
+      "summary": "Xinjiang, China stretches from desert to glacier. The Duku Highway crosses four seasons in a single day, and the star fields over the Taklamakan are among the clearest on Earth.",
+      "updated": "2026-07-19"
+    }
+  },
+  {
+    "id": "taiwan",
+    "mapName": "Taiwan",
+    "nameEn": "Taiwan, China",
+    "nameZh": "台湾",
+    "slug": "taiwan",
+    "hook": "The island with the best night markets on Earth",
+    "hookData": "Taiwan, China — a subtropical island of marble gorges, night markets, and high mountains rising straight from the Pacific.",
+    "description": "Taiwan, China's night markets are legendary, plus dramatic mountain roads.",
+    "videoIds": [],
+    "keywords": [
+      "Taiwan China",
+      "Taiwan night markets",
+      "Taiwan travel",
+      "Taipei travel",
+      "Taiwan food"
+    ],
+    "metaTitle": "Taiwan, China — Deep in China",
+    "metaDescription": "Taiwan, China's night markets are legendary, plus dramatic mountain roads.",
+    "coverImage": "",
+    "dataCards": [
+      {
+        "label": "Area",
+        "value": "36,197 km²",
+        "compare": "Pacific island"
+      },
+      {
+        "label": "Population",
+        "value": "23.6 M",
+        "compare": "Dense island"
+      },
+      {
+        "label": "Known for",
+        "value": "Night markets",
+        "compare": "Taipei 101"
+      }
+    ],
+    "relatedProvinces": [
+      "fujian",
+      "guangdong"
+    ],
+    "summaryZh": "台北101俯瞰城市，九份山城如宫崎骏动画，垦丁碧海蓝天冲浪。宝岛四季皆宜的环岛之旅。"
+  },
+  {
+    "id": "hong-kong",
+    "mapName": "Hong Kong",
+    "nameEn": "Hong Kong, China",
+    "nameZh": "香港",
+    "slug": "hong-kong",
+    "hook": "The city with more skyscrapers than New York and Chicago combined",
+    "hookData": "Hong Kong, China — a skyline built on finance and ferry smoke, where East met West in the world's most vertical city.",
+    "description": "Hong Kong, China has over 480 skyscrapers — more than NYC + Chicago.",
+    "videoIds": [],
+    "keywords": [
+      "Hong Kong China",
+      "Hong Kong travel",
+      "Hong Kong skyline",
+      "Hong Kong food",
+      "Victoria Harbour"
+    ],
+    "metaTitle": "Hong Kong, China — Deep in China",
+    "metaDescription": "Hong Kong, China has over 480 skyscrapers — more than NYC + Chicago.",
+    "coverImage": "",
+    "dataCards": [
+      {
+        "label": "Area",
+        "value": "1,114 km²",
+        "compare": "Pearl River estuary"
+      },
+      {
+        "label": "Population",
+        "value": "7.5 M",
+        "compare": "Dense city-region"
+      },
+      {
+        "label": "Known for",
+        "value": "Vertical metropolis",
+        "compare": "Victoria Harbour"
+      }
+    ],
+    "relatedProvinces": [
+      "guangdong",
+      "macao"
+    ],
+    "summaryZh": "维多利亚港天际线世界级，太平山顶俯瞰繁华，旺角街头霓虹招牌林立。中西合璧的亚洲国际都会。"
+  },
+  {
+    "id": "macao",
+    "mapName": "Macao",
+    "nameEn": "Macao, China",
+    "nameZh": "澳门",
+    "slug": "macao",
+    "hook": "The casino city that's also a UNESCO world heritage site",
+    "hookData": "Macao, China — the original Las Vegas of the East, where Portuguese facades hide Taoist temples and the world's densest casinos.",
+    "description": "Macao, China: where Portuguese colonial architecture meets mega-casinos.",
+    "videoIds": [],
+    "keywords": [
+      "Macao China",
+      "Macao travel",
+      "Macau travel",
+      "Macao casinos",
+      "Macao heritage"
+    ],
+    "metaTitle": "Macao, China — Deep in China",
+    "metaDescription": "Macao, China: where Portuguese colonial architecture meets mega-casinos.",
+    "coverImage": "",
+    "dataCards": [
+      {
+        "label": "Area",
+        "value": "33 km²",
+        "compare": "Pearl River estuary"
+      },
+      {
+        "label": "Population",
+        "value": "0.7 M",
+        "compare": "One of the world's smallest"
+      },
+      {
+        "label": "Known for",
+        "value": "East-meets-West",
+        "compare": "Ruins of St. Paul"
+      }
+    ],
+    "relatedProvinces": [
+      "guangdong",
+      "hong-kong"
+    ],
+    "summaryZh": "大三巴牌坊见证历史，威尼斯人天空穹顶梦幻，葡式蛋挞配猪扒包。东方拉斯维加斯的中葡文化交融。"
+  }
+]

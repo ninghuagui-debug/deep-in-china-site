@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deep in China — YouTube Banner (slogan typeset)</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #1c1c1c;
+    display: flex; align-items: center; justify-content: center;
+    min-height: 100vh;
+    font-family: Georgia, "Times New Roman", serif;
+  }
+  /* 2560x1440 = YouTube banner safe canvas */
+  .banner {
+    width: 2560px; height: 1440px; position: relative; overflow: hidden;
+    background: linear-gradient(160deg, #f5f0e7 0%, #efe2d2 45%, #e8d2bd 100%);
+  }
+  .banner svg { position: absolute; bottom: 0; left: 0; width: 100%; height: 72%; display: block; }
+  .brand { position: absolute; top: 130px; right: 150px; text-align: right; }
+  .brand .name { font-size: 66px; letter-spacing: 2px; color: #b5503a; font-weight: bold; }
+  .brand .handle { font-size: 40px; color: #7a6a5a; margin-top: 12px; }
+  .slogan { position: absolute; left: 180px; top: 50%; transform: translateY(-55%); max-width: 1560px; }
+  .slogan .line1 { font-size: 132px; line-height: 1.06; color: #3a2e26; font-style: italic; }
+  .slogan .accent { color: #c35a3e; }
+  .tag { position: absolute; left: 180px; bottom: 150px; font-size: 46px; color: #7a6a5a; letter-spacing: 1px; }
+  /* 缩放提示：在浏览器里按 100% 截图此画布即为 2560x1440 横幅 */
+</style>
+</head>
+<body>
+  <div class="banner">
+    <!-- 水墨山峦层（抽象地理意境，无国界轮廓，避审核） -->
+    <svg viewBox="0 0 2560 1000" preserveAspectRatio="xMidYMax meet">
+      <path d="M0,1000 L0,520 L300,360 L620,500 L980,300 L1320,460 L1700,280 L2100,440 L2560,340 L2560,1000 Z" fill="#dcae93" opacity="0.50"/>
+      <path d="M0,1000 L0,680 L360,460 L760,640 L1180,420 L1560,620 L1980,440 L2400,640 L2560,560 L2560,1000 Z" fill="#c97e5e" opacity="0.70"/>
+      <path d="M0,1000 L0,820 L420,640 L900,820 L1360,600 L1820,800 L2300,640 L2560,780 L2560,1000 Z" fill="#a8502f" opacity="0.88"/>
+    </svg>
+
+    <div class="brand">
+      <div class="name">Deep in China</div>
+      <div class="handle">@DeepinChina-n</div>
+    </div>
+
+    <div class="slogan">
+      <div class="line1">Go deeper than<br><span class="accent">any tourist</span> ever goes</div>
+    </div>
+
+    <div class="tag">34 provinces &middot; one endless country</div>
+  </div>
+</body>
+</html>

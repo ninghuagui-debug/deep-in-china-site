@@ -1,0 +1,15 @@
+{
+  "brand": "Deep in China",
+  "slogan": "Go deeper than any tourist ever goes",
+  "youtubeChannelId": "PLACEHOLDER_YOUTUBE_CHANNEL_ID",
+  "youtubeChannelUrl": "https://www.youtube.com/@DeepinChina-n",
+  "domain": "deepinchina.com",
+  "social": {
+    "youtube": "https://www.youtube.com/@DeepinChina-n"
+  },
+  "heroImages": [
+    "assets/images/hero-mountains.jpg",
+    "assets/images/hero-city.jpg",
+    "assets/images/hero-river.jpg"
+  ]
+}
