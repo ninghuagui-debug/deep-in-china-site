@@ -642,7 +642,8 @@ body {
 .guide-page .back-link { display: inline-block; margin-bottom: 8px; }
 .guide-page h1 { font-family: var(--font-display); font-size: 46px; font-weight: 700; margin: 8px 0 4px; }
 .guide-page .zh { color: var(--text-secondary); font-size: 20px; margin: 0 0 4px; }
-.guide-page .byline { font-size: 13px; color: var(--text-secondary); font-style: italic; margin-bottom: 28px; }
+.guide-page .byline { font-size: 13px; color: var(--text-secondary); font-style: italic; margin-bottom: 4px; }
+.guide-page .updated { font-size: 12px; color: var(--accent); letter-spacing: .04em; text-transform: uppercase; margin: 0 0 28px; }
 .guide-page h2 { font-family: var(--font-display); font-size: 1.7rem; margin: 36px 0 12px; }
 .guide-page p { font-size: 17px; line-height: 1.85; margin-bottom: 18px; color: var(--text-primary); }
 .guide-page ul { padding-left: 22px; margin-bottom: 18px; }
