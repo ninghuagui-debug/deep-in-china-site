@@ -351,22 +351,6 @@ body {
   50% { filter: drop-shadow(0 0 8px rgba(232, 116, 59, 0.6)); }
 }
 
-.map-hint {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 14px;
-  color: var(--accent);
-  background: rgba(196, 84, 48, 0.08);
-  border: 1px solid rgba(196, 84, 48, 0.18);
-  border-radius: var(--radius-sm);
-  padding: 10px 14px;
-  margin-bottom: 14px;
-  font-weight: 500;
-}
-
-.map-hint .fire { font-size: 16px; }
-
 #china-map-real .province-label {
   font-family: var(--font-sans);
   font-size: 7px;
