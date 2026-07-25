@@ -341,16 +341,14 @@ body {
 }
 
 #china-map-real .province.has-hotspot {
-  stroke: #e8743b;
-  stroke-width: 2.2;
-  stroke-linejoin: round;
-  paint-order: stroke fill;
+  fill: #ecd9c9;
+  filter: drop-shadow(0 0 5px rgba(232, 116, 59, 0.4));
   animation: hotspotPulse 1.8s ease-in-out infinite;
 }
 
 @keyframes hotspotPulse {
-  0%, 100% { stroke: #e8743b; stroke-width: 2.2; }
-  50% { stroke: #ff9a5c; stroke-width: 3.4; }
+  0%, 100% { filter: drop-shadow(0 0 3px rgba(232, 116, 59, 0.25)); }
+  50% { filter: drop-shadow(0 0 8px rgba(232, 116, 59, 0.6)); }
 }
 
 .map-hint {
