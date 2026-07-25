@@ -7,6 +7,7 @@ const SITE_CONFIG = {
 
 let PROVINCES = [];
 const PROVINCE_BY_MAPNAME = {};
+let SITE_VIDEOS = [];
 
 document.addEventListener('DOMContentLoaded', () => {
   fetch('data/provinces.json')
@@ -54,7 +55,12 @@ function bindMapEvents(mapContainer, tooltip, panel) {
       if (province) {
         const hs = province.hotspot;
         if (hs && hs.title) {
-          tooltip.innerHTML = `<div class="tip-media"><img src="${hs.image || ''}" alt=""></div><div class="tip-title">${hs.title}</div><div class="tip-summary">${hs.summary || ''}</div><div class="tip-cta">▶ Watch the real video</div>`;
+          const thumbSrc = hs.image || findVideoThumbnailForProvince(province);
+          const mediaHtml = thumbSrc ? `<div class="tip-media"><img src="${escapeHtml(thumbSrc)}" alt=""></div>` : '';
+          const ctaHtml = thumbSrc
+            ? '<div class="tip-cta">▶ Watch the real video</div>'
+            : '<div class="tip-cta" style="opacity:.6;">▶ Coming soon</div>';
+          tooltip.innerHTML = `${mediaHtml}<div class="tip-title">${hs.title}</div><div class="tip-summary">${hs.summary || ''}</div>${ctaHtml}`;
         } else {
           tooltip.innerHTML = `<div class="tip-name">${province.nameEn}</div><div class="tip-hook">${province.hook}</div>`;
         }
@@ -135,6 +141,16 @@ function escapeHtml(s) {
     .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 }
 
+function findVideoThumbnailForProvince(province) {
+  if (!province || !SITE_VIDEOS.length) return null;
+  const names = [province.mapName, province.nameEn, province.slug]
+    .filter(Boolean)
+    .map(n => n.replace(/,?\s*China$/i, '').trim().toLowerCase())
+    .filter(n => n.length > 1);
+  const match = SITE_VIDEOS.find(v => names.some(n => v.title.toLowerCase().includes(n)));
+  return match ? (match.thumbnail || `https://i.ytimg.com/vi/${match.id}/hqdefault.jpg`) : null;
+}
+
 function initVideoGrid() {
   const grid = document.getElementById('videoGrid');
   if (!grid) return;
@@ -142,6 +158,7 @@ function initVideoGrid() {
   fetch('data/videos.json')
     .then(r => r.ok ? r.json() : [])
     .then(videos => {
+      SITE_VIDEOS = Array.isArray(videos) ? videos : [];
       if (!Array.isArray(videos) || videos.length === 0) return; // 保留 HTML 静态占位
       grid.innerHTML = '';
       videos.slice(0, 12).forEach(v => {
