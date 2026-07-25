@@ -100,6 +100,19 @@ function showProvincePanel(province, path) {
       ).join('')
     : '<p style="color:var(--text-secondary);font-size:13px;">Video coming soon — paste YouTube video IDs into provinces.json → videoIds</p>';
 
+  const affEl = document.getElementById('panelAffiliate');
+  if (affEl) {
+    affEl.innerHTML = `<div class="affiliate">
+      <h2>Plan your trip to ${province.nameEn}</h2>
+      <p class="aff-intro">As an affiliate, we may earn from partner links at no extra cost to you.</p>
+      <div class="affiliate-cards">
+        <a class="aff-card" href="https://www.booking.com" target="_blank" rel="noopener">Hotels &amp; Stays <span>Booking.com</span></a>
+        <a class="aff-card" href="https://www.trip.com" target="_blank" rel="noopener">Flights &amp; Tours <span>Trip.com</span></a>
+        <a class="aff-card" href="https://www.amazon.com" target="_blank" rel="noopener">Travel Gear <span>Amazon</span></a>
+      </div>
+    </div>`;
+  }
+
   const dcEl = document.getElementById('panelDataCards');
   if (dcEl) {
     dcEl.innerHTML = province.dataCards && province.dataCards.length
