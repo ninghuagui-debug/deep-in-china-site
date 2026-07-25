@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2560" height="1440" viewBox="0 0 2560 1440">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0a2630"/>
+      <stop offset="0.55" stop-color="#15414c"/>
+      <stop offset="1" stop-color="#1f5d5b"/>
+    </linearGradient>
+    <linearGradient id="mtn1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0a222b" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#0a222b" stop-opacity="0.35"/>
+    </linearGradient>
+    <linearGradient id="mtn2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#10323b" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#10323b" stop-opacity="0.45"/>
+    </linearGradient>
+    <linearGradient id="mtn3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1b4a52" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#1b4a52" stop-opacity="0.5"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 天空 -->
+  <rect width="2560" height="1440" fill="url(#sky)"/>
+
+  <!-- 远山层 -->
+  <path d="M0 760 L360 560 L720 720 L1100 520 L1500 700 L1900 540 L2300 700 L2560 600 L2560 1440 L0 1440 Z" fill="url(#mtn1)"/>
+  <!-- 中山层 -->
+  <path d="M0 900 L420 680 L860 880 L1280 660 L1720 860 L2160 680 L2560 840 L2560 1440 L0 1440 Z" fill="url(#mtn2)"/>
+  <!-- 近山层 -->
+  <path d="M0 1060 L520 820 L1040 1040 L1560 800 L2080 1020 L2560 860 L2560 1440 L0 1440 Z" fill="url(#mtn3)"/>
+
+  <!-- 标题 -->
+  <text x="150" y="600" font-family="Georgia, 'Times New Roman', serif" font-size="210" font-weight="700" fill="#f4f7f6" letter-spacing="2">Deep in China</text>
+
+  <!-- 标语 -->
+  <text x="158" y="730" font-family="Georgia, 'Times New Roman', serif" font-size="62" fill="#bfe3e0">Go deeper than any tourist ever goes</text>
+
+  <!-- 右下角 handle + 网址 -->
+  <text x="2410" y="1300" text-anchor="end" font-family="Georgia, 'Times New Roman', serif" font-size="78" font-weight="700" fill="#f4f7f6">@DeepinChina-n</text>
+  <text x="2410" y="1380" text-anchor="end" font-family="Georgia, 'Times New Roman', serif" font-size="46" fill="#8fcac6">deepinchina.com</text>
+</svg>
