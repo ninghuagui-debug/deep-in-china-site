@@ -38,6 +38,8 @@
   const affiliate = p.affiliate ? renderAffiliate(p.affiliate) : '';
   // NEW: social matrix (from site.json)
   const social = renderSocial(site.social);
+  // NEW: long-form guide CTA (option B) — links province page to guides/{slug}.html
+  const guideCta = p.guideUrl ? renderGuideCta(p.guideUrl) : '';
 
   content.innerHTML = `
     <a href="../" class="back-link">&larr; Back to the map</a>
@@ -57,6 +59,7 @@
     </div>` : ''}
     ${p.summaryZh ? `<div class="zh-intro"><h3>中文简介</h3><p>${p.summaryZh}</p></div>` : ''}
     ${videos ? `<h2>Watch</h2>${videos}` : '<p class="coming">Video coming soon &mdash; paste YouTube IDs into provinces.json &rarr; videoIds</p>'}
+    ${guideCta}
     ${guide}
     ${affiliate}
     ${kw ? `<div class="keywords">${kw}</div>` : ''}
@@ -76,6 +79,10 @@
     return `<div class="guide"><h2>Travel guide</h2>${blocks.join('')}</div>`;
     function block(title, text) { return `<div class="guide-block"><h3>${title}</h3><p>${text}</p></div>`; }
     function listBlock(title, items) { return `<div class="guide-block"><h3>${title}</h3><ul>${items.map(i => `<li>${i}</li>`).join('')}</ul></div>`; }
+  }
+
+  function renderGuideCta(url) {
+    return `<div class="guide-cta"><span class="gc-text">Read our full <strong>${p.nameEn}</strong> travel guide</span><a class="gc-link" href="../${url}">Read the guide &rarr;</a></div>`;
   }
 
   function renderAffiliate(a) {

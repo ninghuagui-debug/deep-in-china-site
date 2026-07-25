@@ -637,8 +637,35 @@ body {
 .social-link { padding: 8px 18px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 20px; text-decoration: none; color: var(--text-primary); font-size: 14px; font-weight: 500; transition: var(--transition); }
 .social-link:hover { background: var(--accent); color: var(--text-light); border-color: var(--accent); }
 
+/* Long-form travel guide article page */
+.guide-page { max-width: 820px; margin: 0 auto; padding: 96px 20px 60px; }
+.guide-page .back-link { display: inline-block; margin-bottom: 8px; }
+.guide-page h1 { font-family: var(--font-display); font-size: 46px; font-weight: 700; margin: 8px 0 4px; }
+.guide-page .zh { color: var(--text-secondary); font-size: 20px; margin: 0 0 4px; }
+.guide-page .byline { font-size: 13px; color: var(--text-secondary); font-style: italic; margin-bottom: 28px; }
+.guide-page h2 { font-family: var(--font-display); font-size: 1.7rem; margin: 36px 0 12px; }
+.guide-page p { font-size: 17px; line-height: 1.85; margin-bottom: 18px; color: var(--text-primary); }
+.guide-page ul { padding-left: 22px; margin-bottom: 18px; }
+.guide-page li { font-size: 17px; line-height: 1.85; margin-bottom: 8px; color: var(--text-primary); }
+.guide-page img { width: 100%; border-radius: var(--radius); margin: 24px 0 8px; box-shadow: var(--shadow); }
+.guide-page .caption { font-size: 13px; color: var(--text-secondary); text-align: center; font-style: italic; margin: 0 0 28px; }
+.guide-page .guide-end { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--border); font-size: 14px; color: var(--text-secondary); }
+.guide-page .guide-end a { color: var(--accent); text-decoration: none; }
+.guide-page .guide-end a:hover { text-decoration: underline; }
+
+/* Province page → full guide CTA (option B) */
+.guide-cta { margin: 36px 0; padding: 20px 24px; background: var(--bg-secondary); border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.guide-cta .gc-text { font-size: 16px; color: var(--text-primary); }
+.guide-cta .gc-text strong { color: var(--accent); }
+.guide-cta .gc-link { background: var(--accent); color: var(--text-light); padding: 10px 22px; border-radius: var(--radius-sm); font-weight: 600; text-decoration: none; white-space: nowrap; transition: var(--transition); }
+.guide-cta .gc-link:hover { background: var(--accent-hover); }
+
 @media (max-width: 768px) {
   .province-page { padding: 60px 16px 40px; }
   .province-page h1 { font-size: 34px; }
   .province-page .hook { font-size: 17px; }
+  .guide-page { padding: 80px 16px 40px; }
+  .guide-page h1 { font-size: 34px; }
+  .guide-page h2 { font-size: 1.4rem; }
+  .guide-cta { flex-direction: column; align-items: flex-start; }
 }
