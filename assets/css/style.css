@@ -314,7 +314,7 @@ body {
 
 #china-map-real .province {
   fill: #e8e4d9;
-  stroke: #d4cdbe;
+  stroke: none;
   stroke-width: 1.2;
   stroke-linejoin: round;
   paint-order: stroke fill;
