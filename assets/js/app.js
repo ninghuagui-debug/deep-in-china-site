@@ -116,34 +116,40 @@ function openProvinceByMapName(mapName) {
   if (path && province) showProvincePanel(province, path);
 }
 
+function escapeHtml(s) {
+  return String(s == null ? '' : s)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
+
 function initVideoGrid() {
   const grid = document.getElementById('videoGrid');
   if (!grid) return;
-  const withVideos = PROVINCES.filter(p => p.videoIds && p.videoIds.length > 0);
-  if (withVideos.length === 0) return; // 无视频时保留 HTML 静态 Coming soon 占位
-
-  grid.innerHTML = '';
-  withVideos.forEach(p => {
-    p.videoIds.forEach(vid => {
-      const card = document.createElement('a');
-      card.className = 'video-card';
-      card.href = '#map';
-      card.innerHTML = `
-        <div class="video-thumb">
-          <iframe width="100%" height="180" src="https://www.youtube.com/embed/${vid}" title="${p.nameEn} video on YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div class="video-info">
-          <h3>${p.nameEn}</h3>
-          <p class="video-province">${p.nameZh} · ${p.nameEn}</p>
-        </div>`;
-      card.addEventListener('click', (e) => {
-        e.preventDefault();
-        document.getElementById('map').scrollIntoView({ behavior: 'smooth' });
-        setTimeout(() => openProvinceByMapName(p.mapName), 400);
+  // 读频道最新视频流 (由 scripts/update_site_videos.py 自动生成 data/videos.json)
+  fetch('data/videos.json')
+    .then(r => r.ok ? r.json() : [])
+    .then(videos => {
+      if (!Array.isArray(videos) || videos.length === 0) return; // 保留 HTML 静态占位
+      grid.innerHTML = '';
+      videos.slice(0, 12).forEach(v => {
+        const card = document.createElement('a');
+        card.className = 'video-card';
+        card.href = v.url || ('https://www.youtube.com/watch?v=' + v.id);
+        card.target = '_blank';
+        card.rel = 'noopener';
+        const thumb = v.thumbnail || ('https://i.ytimg.com/vi/' + v.id + '/hqdefault.jpg');
+        card.innerHTML = `
+          <div class="video-thumb">
+            <img src="${escapeHtml(thumb)}" alt="${escapeHtml(v.title)}" loading="lazy" style="width:100%;height:180px;object-fit:cover;display:block;">
+          </div>
+          <div class="video-info">
+            <h3>${escapeHtml(v.title)}</h3>
+            <p class="video-province">${escapeHtml(v.published || 'New')}</p>
+          </div>`;
+        grid.appendChild(card);
       });
-      grid.appendChild(card);
-    });
-  });
+    })
+    .catch(() => { /* 读取失败时保留静态占位 */ });
 }
 
 function initNavScroll() {
