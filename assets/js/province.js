@@ -1,6 +1,10 @@
 // Province page renderer — reads data/provinces.json by window.SLUG
 (async function () {
-  const SLUG = window.SLUG;
+  // 兼容两种注入方式: 旧版 window.SLUG 与当前生成器的全局 const SLUG
+  // (全局 const 词法绑定不在 window 上, 必须用间接 eval 在全局作用域读取)
+  let SLUG;
+  try { SLUG = (0, eval)('SLUG'); } catch (e) { SLUG = undefined; }
+  if (!SLUG) SLUG = window.SLUG || null;
   const content = document.getElementById('provinceContent');
   if (!content) return;
   let data, site = { social: {} };
