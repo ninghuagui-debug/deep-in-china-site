@@ -8,6 +8,7 @@ const SITE_CONFIG = {
 let PROVINCES = [];
 const PROVINCE_BY_MAPNAME = {};
 let SITE_VIDEOS = [];
+let ARTICLES = [];
 
 document.addEventListener('DOMContentLoaded', () => {
   fetch('data/provinces.json')
@@ -21,6 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const el = document.getElementById('province-data');
       afterData(el ? JSON.parse(el.textContent) : []);
     });
+  fetch('data/articles.json')
+    .then(r => { if (r.ok) return r.json(); else throw new Error('no articles'); })
+    .then(data => { ARTICLES = Array.isArray(data) ? data : []; })
+    .catch(() => { ARTICLES = []; });
   initNavScroll();
 });
 
@@ -29,6 +34,7 @@ function afterData(data) {
   PROVINCES.forEach(p => { PROVINCE_BY_MAPNAME[p.mapName] = p; });
   initMap();
   initVideoGrid();
+  initArticleGrid();
 }
 
 function initMap() {
@@ -40,6 +46,10 @@ function initMap() {
   bindMapEvents(mapContainer, tooltip, panel);
 
   document.getElementById('panelClose').addEventListener('click', () => {
+    panel.classList.add('hidden');
+    document.querySelectorAll('#china-map-real .province.active').forEach(p => p.classList.remove('active'));
+  });
+  document.getElementById('panelBack')?.addEventListener('click', () => {
     panel.classList.add('hidden');
     document.querySelectorAll('#china-map-real .province.active').forEach(p => p.classList.remove('active'));
   });
@@ -126,6 +136,30 @@ function showProvincePanel(province, path) {
       : '';
   }
 
+  // Article / guide card — show if this province has a guide in articles.json or guideUrl
+  const guideEl = document.getElementById('panelGuide');
+  if (guideEl) {
+    const article = ARTICLES.find(a => a.province === province.slug);
+    const guideUrl = province.guideUrl || (article ? article.url : null);
+    const guideTitle = article ? article.title : (`${province.nameEn} Travel Guide`);
+    const guideCover = article ? article.coverImage : '';
+    const guideExcerpt = article ? article.excerpt : '';
+    if (guideUrl) {
+      guideEl.innerHTML = `
+        <div class="panel-guide-card">
+          ${guideCover ? `<img class="pg-cover" src="${escapeHtml(guideCover)}" alt="" loading="lazy">` : ''}
+          <div class="pg-body">
+            <span class="pg-label">Travel Guide</span>
+            <strong class="pg-title">${guideTitle}</strong>
+            ${guideExcerpt ? `<p class="pg-excerpt">${guideExcerpt}</p>` : ''}
+          </div>
+          <a class="btn-secondary pg-btn" href="${guideUrl}">Read full guide &rarr;</a>
+        </div>`;
+    } else {
+      guideEl.innerHTML = '';
+    }
+  }
+
   panel.classList.remove('hidden');
 }
 
@@ -187,4 +221,35 @@ function initNavScroll() {
   window.addEventListener('scroll', () => {
     nav.style.boxShadow = window.scrollY > 100 ? '0 2px 12px rgba(0,0,0,0.1)' : 'none';
   });
+}
+
+function initArticleGrid() {
+  const grid = document.getElementById('articleGrid');
+  if (!grid) return;
+  fetch('data/articles.json')
+    .then(r => r.ok ? r.json() : [])
+    .then(articles => {
+      if (!Array.isArray(articles) || articles.length === 0) return;
+      // Sort by viewCount descending (most popular first)
+      articles.sort((a, b) => (b.viewCount || 0) - (a.viewCount || 0));
+      grid.innerHTML = '';
+      articles.forEach(a => {
+        const card = document.createElement('a');
+        card.className = 'video-card article-card';
+        card.href = a.url;
+        card.target = '_blank';
+        card.rel = 'noopener';
+        const thumb = a.coverImage || '';
+        card.innerHTML = `
+          <div class="video-thumb">
+            ${thumb ? `<img src="${escapeHtml(thumb)}" alt="${escapeHtml(a.title)}" loading="lazy" style="width:100%;height:180px;object-fit:cover;display:block;">` : '<div class="video-thumb-placeholder" style="height:180px;"><span>No image</span></div>'}
+          </div>
+          <div class="video-info">
+            <h3>${escapeHtml(a.title)}</h3>
+            <p class="video-province">${escapeHtml(a.provinceName || a.province || '')} &middot; ${escapeHtml(a.datePublished || '')}</p>
+          </div>`;
+        grid.appendChild(card);
+      });
+    })
+    .catch(() => { /* keep static placeholder */ });
 }

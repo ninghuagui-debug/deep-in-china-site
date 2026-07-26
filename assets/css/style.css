@@ -439,6 +439,14 @@ body {
 
 .province-panel.hidden { display: none; }
 
+.panel-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+.panel-actions .btn-primary { flex: 1; }
+.panel-back-btn { white-space: nowrap; font-size: 13px; padding: 10px 16px; }
+
 .panel-header {
   display: flex;
   justify-content: space-between;
@@ -629,6 +637,16 @@ body {
 .aff-card { display: flex; flex-direction: column; gap: 4px; padding: 16px; background: var(--bg-primary); border: 1px solid var(--border); border-radius: var(--radius-sm); text-decoration: none; color: var(--text-primary); font-weight: 600; transition: var(--transition); }
 .aff-card:hover { border-color: var(--accent); transform: translateY(-2px); }
 .aff-card span { font-size: 13px; font-weight: 500; color: var(--accent); }
+
+/* Panel guide / article card */
+.panel-guide { margin: 20px 0 0; }
+.panel-guide-card { display: flex; gap: 14px; padding: 16px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: var(--radius); align-items: flex-start; }
+.panel-guide-card .pg-cover { width: 80px; height: 80px; object-fit: cover; border-radius: var(--radius-sm); flex-shrink: 0; }
+.panel-guide-card .pg-body { flex: 1; min-width: 0; }
+.panel-guide-card .pg-label { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, transparent); padding: 2px 8px; border-radius: 10px; margin-bottom: 4px; }
+.panel-guide-card .pg-title { display: block; font-size: 15px; font-weight: 600; line-height: 1.3; color: var(--text-primary); margin-bottom: 2px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.panel-guide-card .pg-excerpt { font-size: 13px; color: var(--text-secondary); line-height: 1.4; margin: 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.panel-guide-card .pg-btn { align-self: center; flex-shrink: 0; font-size: 13px; padding: 8px 16px; white-space: nowrap; }
 
 /* Social matrix */
 .social-matrix { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--border); text-align: center; }
