@@ -1,1 +1,24 @@
-[{"slug": "guangxi", "title": "Guangxi Travel Guide — Karst, Rice Terraces & Luosifen", "url": "guides/guangxi.html", "excerpt": "Guilin karst peaks rising from flat ground, the Li River to Yangshuo, 700-year-old rice terraces, and the stinkiest noodle soup you'll ever eat.", "coverImage": "assets/img/guides/guangxi/guilin_5.jpg", "province": "guangxi", "provinceName": "Guangxi", "datePublished": "2026-07-26", "viewCount": 1, "category": "travel-guide"}]
+[
+  {
+    "slug": "guangxi",
+    "title": "Guangxi Travel Guide — Karst, Rice Terraces & Luosifen",
+    "url": "guides/guangxi.html",
+    "excerpt": "Guilin karst peaks rising from flat ground, the Li River to Yangshuo, 700-year-old rice terraces, and the stinkiest noodle soup you'll ever eat.",
+    "coverImage": "assets/img/guides/guangxi/guilin_5.jpg",
+    "province": "guangxi",
+    "provinceName": "Guangxi",
+    "datePublished": "2026-07-26",
+    "viewCount": 1,
+    "category": "travel-guide"
+  },
+  {
+    "slug": "chongqing-rail-tunnel",
+    "province": "chongqing",
+    "title": "Chongqing Just Dug a High-Speed Rail Tunnel Under the Yangtze River — And It's China's First",
+    "url": "guides/chongqing-rail-tunnel.html",
+    "excerpt": "I've been coming to Chongqing for years, and every time I step off the train at Chongqing North, I feel like I'm walking into a city that refuses to play by nor...",
+    "coverImage": "assets/img/guides/chongqing-rail-tunnel/cover.jpg",
+    "datePublished": "2026-07-27",
+    "viewCount": 0
+  }
+]
