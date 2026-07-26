@@ -113,7 +113,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--bg-hero);
+  background: url(../img/hero/hero-bg.jpg) center/cover no-repeat;
   overflow: hidden;
 }
 
