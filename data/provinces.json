@@ -145,18 +145,20 @@
     "nameZh": "山西",
     "slug": "shanxi",
     "hook": "A province with more ancient buildings than all of Europe",
-    "hookData": "The cradle of Chinese commerce — where Ming-dynasty merchants built courtyard mansions and the oldest wooden pagoda on Earth still stands.",
-    "description": "Shanxi has more pre-Ming dynasty wooden buildings than all of Europe combined.",
+    "hookData": "The cradle of Chinese commerce — where Ming-dynasty merchants built courtyard mansions and China's oldest surviving wooden pagoda still stands.",
+    "description": "Beyond the Great Wall's southern reaches, Shanxi keeps China's oldest wooden halls standing — Pingyao's Ming-era streets, the cliff-carved Yungang Buddhas, and Wutai Mountain's sacred peaks.",
     "videoIds": [],
     "keywords": [
-      "Shanxi",
-      "ancient buildings China",
-      "Shanxi travel",
+      "Shanxi China",
+      "Shanxi travel guide",
       "Pingyao ancient city",
-      "Shanxi temples"
+      "Yungang Grottoes",
+      "Yingxian Wooden Pagoda",
+      "Shanxi temples",
+      "Wutai Mountain"
     ],
-    "metaTitle": "Shanxi — Deep in China",
-    "metaDescription": "Shanxi has more pre-Ming dynasty wooden buildings than all of Europe combined.",
+    "metaTitle": "Shanxi Travel Guide — Ancient Capitals, Pingyao & Yungang | Deep in China",
+    "metaDescription": "Shanxi guards China's deepest archive of wooden architecture — from the 1,000-year-old Yingxian Pagoda to Pingyao's walled Ming town and the cliff-carved Yungang Buddhas. Walk the cradle of the Jin merchants and stand where dynasties kept their timber halls alive.",
     "coverImage": "",
     "dataCards": [
       {
@@ -192,17 +194,17 @@
     "slug": "inner-mongolia",
     "hook": "A grassland so big it takes 3 days to drive across",
     "hookData": "Where the Great Wall meets the grassland — Genghis Khan's legacy lives on in sweeping plains at the Gobi's edge.",
-    "description": "Inner Mongolia's grasslands stretch further than you can imagine, dotted with nomad culture.",
+    "description": "Ride horseback across endless horizons where Genghis Khan's heirs once grazed their flocks. Inner Mongolia blends sweeping grasslands, the Gobi's edge, and living nomadic traditions into one of China's last great open skies.",
     "videoIds": [],
     "keywords": [
-      "Inner Mongolia",
-      "China grassland",
       "Inner Mongolia travel",
-      "Mongolia nomads",
-      "Genghis Khan"
+      "Inner Mongolia grasslands",
+      "China grassland",
+      "Mongol nomads China",
+      "Genghis Khan Ordos"
     ],
-    "metaTitle": "Inner Mongolia — Deep in China",
-    "metaDescription": "Inner Mongolia's grasslands stretch further than you can imagine, dotted with nomad culture.",
+    "metaTitle": "Inner Mongolia Travel: Grasslands, Gobi & Mongol Nomads",
+    "metaDescription": "Across the Xilingol grasslands to the Gobi's edge, Inner Mongolia's Mongol nomads still ride under endless sky — a vast open frontier beyond the Great Wall.",
     "coverImage": "",
     "dataCards": [
       {
