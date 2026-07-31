@@ -241,19 +241,19 @@
     "nameEn": "Liaoning",
     "nameZh": "辽宁",
     "slug": "liaoning",
-    "hook": "China's first industrial city — and its strangest",
-    "hookData": "The rust-belt heartland turned coastal gateway, where Manchurian history and Korean influence shape a raw, industrial northeast.",
-    "description": "Liaoning was China's first industrial powerhouse, with a mix of Soviet-era factories and imperial palaces.",
+    "hook": "The cradle of China's heavy industry — and its strangest border town",
+    "hookData": "Rust-belt heartland turned coastal gateway — Qing imperial history in Shenyang, seaside boulevards in Dalian, and Korean-border grit in Dandong.",
+    "description": "Liaoning is the cradle of China's heavy industry, where Soviet-era factory districts sit beside the Qing dynasty's first imperial palace. Cycle Dalian's coastal roads, walk Dandong's Broken Bridge over the Yalu River, and eat your way through Shenyang.",
     "videoIds": [],
     "keywords": [
-      "Liaoning",
-      "Shenyang travel",
       "Liaoning travel",
-      "Shenyang imperial palace",
-      "China northeast"
+      "Shenyang Imperial Palace",
+      "Dalian coastal road",
+      "Dandong Yalu River",
+      "Northeast China travel"
     ],
-    "metaTitle": "Liaoning — Deep in China",
-    "metaDescription": "Liaoning was China's first industrial powerhouse, with a mix of Soviet-era factories and imperial palaces.",
+    "metaTitle": "Liaoning Travel: Shenyang Palace, Dalian Coast & Dandong",
+    "metaDescription": "Explore Liaoning, cradle of China's heavy industry — Shenyang's UNESCO imperial palace, Dalian's seaside roads and the Yalu River border town of Dandong.",
     "coverImage": "",
     "dataCards": [
       {
@@ -329,30 +329,30 @@
     "nameEn": "Heilongjiang",
     "nameZh": "黑龙江",
     "slug": "heilongjiang",
-    "hook": "The city where -30°C is a normal winter day",
-    "hookData": "Harbin winter: average -20°C, coldest days hit -40°C",
-    "description": "China's frozen frontier where rivers freeze solid and Harbin builds ice cities.",
+    "hook": "The province where -30°C is just another winter morning",
+    "hookData": "Harbin averages about -18°C in January; up north in Mohe, the thermometer can drop past -40°C.",
+    "description": "Rivers freeze solid enough to walk on, steam curls off every doorway, and each January Harbin carves an entire city out of ice. Beyond it: birch forests, Russian-era streets, and Mohe, China's northernmost town.",
     "videoIds": [],
     "keywords": [
-      "Heilongjiang",
-      "Harbin ice festival",
-      "China winter travel",
-      "Harbin travel",
-      "ice city China"
+      "Harbin Ice and Snow World",
+      "Harbin ice festival travel guide",
+      "Mohe northernmost town China",
+      "Yabuli ski resort China",
+      "Heilongjiang winter itinerary"
     ],
-    "metaTitle": "Heilongjiang, China — Where -30°C Is Just a Normal Day | Deep in China",
-    "metaDescription": "Discover Heilongjiang: China's frozen frontier where the Harbin Ice Festival builds 30-meter sculptures and -30°C is business as usual.",
+    "metaTitle": "Heilongjiang Travel: Harbin Ice Festival, Mohe & Snow Trips",
+    "metaDescription": "Heilongjiang is China's coldest province: walk Harbin's Ice-Snow World, cross the frozen Songhua, and chase the aurora in Mohe, China's northernmost town.",
     "coverImage": "",
     "dataCards": [
       {
         "label": "Area",
         "value": "473,000 km²",
-        "compare": "Amur River frontier"
+        "compare": "Heilongjiang (Amur) River border"
       },
       {
         "label": "Population",
         "value": "31.9 M",
-        "compare": "Sparse northeast"
+        "compare": "2020 census, sparse northeast"
       },
       {
         "label": "Known for",
