@@ -1,24 +1,25 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free Video Health Check — 视频体检工具 | Deep in China</title>
-<meta name="description" content="Free video pre-publish check: resolution, orientation, duration, size. 免费视频发布前体检：分辨率/方向/时长/大小，本地分析不上传。">
-<meta name="keywords" content="video check, video pre-publish, 视频体检, 视频质检, 竖屏检查">
+<title>Free Video Health Check — Pre-Publish Checker | Deep in China</title>
+<meta name="description" content="Free video pre-publish health check: resolution, orientation, duration, size. 100% local browser analysis — your video never leaves your device.">
+<meta name="keywords" content="video health check, video pre-publish check, video quality check, vertical video check, shorts check, 视频体检">
 <link rel="canonical" href="https://ninghuagui-debug.github.io/deep-in-china-site/video-check.html">
-<meta property="og:title" content="Free Video Health Check — 视频体检工具">
-<meta property="og:description" content="免费视频发布前体检：分辨率/方向/时长/大小，浏览器本地分析，视频不上传。">
+<meta property="og:title" content="Free Video Health Check — Pre-Publish Checker">
+<meta property="og:description" content="Check resolution, orientation, duration and size before you publish. 100% local, nothing uploaded.">
+<meta name="twitter:card" content="summary_large_image">
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
   body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background:#0f1b2d; color:#e6ecf5; min-height:100vh; }
   .topbar { background:#0a1422; border-bottom:1px solid #1c2a42; padding:10px 0; }
-  .topbar .wrap { display:flex; justify-content:space-between; align-items:center; }
-  .logo { color:#c9a86a; font-weight:600; font-size:15px; text-decoration:none; font-family:'Playfair Display', serif; }
+  .topbar .wrap { display:flex; justify-content:space-between; align-items:center; padding:0 20px; max-width:860px; margin:0 auto; }
+  .logo { color:#c9a86a; font-weight:600; font-size:15px; text-decoration:none; font-family:'Playfair Display', Georgia, serif; }
   .yt-link { color:#9fb3d1; font-size:13px; text-decoration:none; border:1px solid #2a3a58; padding:5px 14px; border-radius:20px; transition:.2s; }
   .yt-link:hover { border-color:#c9a86a; color:#c9a86a; }
   .wrap { max-width:860px; margin:0 auto; padding:28px 20px; }
-  h1 { font-size:24px; margin-bottom:6px; font-family:'Playfair Display', serif; }
+  h1 { font-size:24px; margin-bottom:6px; font-family:'Playfair Display', Georgia, serif; }
   .sub { color:#8b9cb5; margin-bottom:26px; font-size:14px; }
   .drop { border:2px dashed #2a3a58; border-radius:14px; padding:46px 20px; text-align:center; cursor:pointer; transition:.2s; background:#111d31; }
   .drop:hover, .drop.drag { border-color:#c9a86a; background:#15233b; }
@@ -54,30 +55,30 @@
 </head>
 <body>
 <div class="topbar">
-  <div class="wrap" style="padding:0 20px">
+  <div class="wrap">
     <a class="logo" href="./">Deep in China</a>
     <a class="yt-link" href="https://www.youtube.com/@deepinchina-n" target="_blank" rel="noopener">▶ Watch Deep in China on YouTube</a>
   </div>
 </div>
 <div class="wrap">
-  <h1>🎬 免费视频体检工具</h1>
-  <div class="sub">发布前检查：分辨率 / 方向 / 时长 / 大小 — 100% 浏览器本地分析，视频不会上传</div>
+  <h1>🎬 Free Video Health Check</h1>
+  <div class="sub">Pre-publish check: resolution / orientation / duration / size — 100% local browser analysis, your video is never uploaded</div>
 
   <div class="drop" id="drop">
-    <div class="big">点击或拖拽视频到这里</div>
-    <div class="hint">支持 mp4 / mov / webm / mkv — 本地处理，隐私安全</div>
+    <div class="big">Click or drag a video here</div>
+    <div class="hint">Supports MP4 / MOV / WEBM / MKV — processed entirely on your device</div>
     <input type="file" id="file" accept="video/*">
   </div>
 
-  <div class="busy" id="busy"><div class="spinner"></div><div>读取视频信息中...</div></div>
+  <div class="busy" id="busy"><div class="spinner"></div><div>Reading video metadata...</div></div>
 
   <div id="result"></div>
   <div id="err" class="err"></div>
 
-  <div class="privacy">🔒 你的视频只在你的浏览器里被读取，不会上传到任何服务器</div>
+  <div class="privacy">🔒 Your video is read only in your browser — nothing is uploaded to any server</div>
 
   <div class="foot">
-    <a href="./">Deep in China</a> · 探索中国秘境 · <a href="https://www.youtube.com/@deepinchina-n" target="_blank" rel="noopener">YouTube 频道</a>
+    <a href="./">Deep in China</a> · Go deeper than any tourist · <a href="https://www.youtube.com/@deepinchina-n" target="_blank" rel="noopener">YouTube Channel</a>
   </div>
 </div>
 
@@ -107,38 +108,38 @@ function analyze(file) {
     render({ w, h, dur, sizeMB, name: file.name, type: file.type || 'unknown' });
     done();
   };
-  v.onerror = () => { errBox.textContent = '❌ 无法读取视频（格式不支持或文件损坏）'; errBox.style.display = 'block'; done(); };
-  setTimeout(() => { if (v.readyState < 1) { errBox.textContent = '❌ 读取超时，换浏览器或格式试试'; errBox.style.display = 'block'; done(); } }, 15000);
+  v.onerror = () => { errBox.textContent = '❌ Cannot read this video (unsupported format or corrupt file)'; errBox.style.display = 'block'; done(); };
+  setTimeout(() => { if (v.readyState < 1) { errBox.textContent = '❌ Read timeout — try another browser or format'; errBox.style.display = 'block'; done(); } }, 15000);
 }
 
 function render(d) {
   const issues = [];
   const portrait = d.h > d.w;
-  if (!portrait) issues.push({ lvl: 'FAIL', item: '方向', det: `横屏 ${d.w}x${d.h}，短视频需竖屏 9:16`, fix: '旋转/裁剪为竖屏 1080x1920' });
+  if (!portrait) issues.push({ lvl: 'FAIL', item: 'Orientation', det: `Landscape ${d.w}x${d.h} — Shorts need vertical 9:16`, fix: 'Rotate/crop to vertical 1080x1920' });
   else {
     const ratio = +(d.h / d.w).toFixed(2);
-    if (ratio < 1.7 || ratio > 2.0) issues.push({ lvl: 'WARN', item: '比例', det: `宽高比 ${ratio}（标准 9:16≈1.78）`, fix: '检查导出分辨率' });
-    if (d.w < 720) issues.push({ lvl: 'WARN', item: '分辨率', det: `宽度 ${d.w}px 偏低`, fix: '建议导出 1080x1920' });
+    if (ratio < 1.7 || ratio > 2.0) issues.push({ lvl: 'WARN', item: 'Aspect ratio', det: `${ratio} (standard 9:16 ≈ 1.78)`, fix: 'Check export resolution' });
+    if (d.w < 720) issues.push({ lvl: 'WARN', item: 'Resolution', det: `Width ${d.w}px is low`, fix: 'Export at 1080x1920' });
   }
-  if (d.dur > 60) issues.push({ lvl: 'WARN', item: '时长', det: `${d.dur.toFixed(0)}s > 60s（Shorts 上限）`, fix: '裁剪到 60s 内' });
-  if (d.sizeMB > 200) issues.push({ lvl: 'WARN', item: '大小', det: `${d.sizeMB.toFixed(1)}MB 偏大`, fix: '压缩导出' });
+  if (d.dur > 60) issues.push({ lvl: 'WARN', item: 'Duration', det: `${d.dur.toFixed(0)}s > 60s (Shorts limit)`, fix: 'Trim under 60s' });
+  if (d.sizeMB > 200) issues.push({ lvl: 'WARN', item: 'File size', det: `${d.sizeMB.toFixed(1)}MB is large`, fix: 'Compress export' });
   const fail = issues.filter(i => i.lvl === 'FAIL').length;
   const warn = issues.filter(i => i.lvl === 'WARN').length;
   const verdict = fail ? 'FAIL' : (warn ? 'WARN' : 'PASS');
 
-  let html = `<div style="margin-top:16px"><span class="verdict ${verdict}">${verdict === 'PASS' ? '✅ 可发' : verdict === 'WARN' ? '⚠️ 建议修复' : '❌ 别发'}</span>`;
+  let html = `<div style="margin-top:16px"><span class="verdict ${verdict}">${verdict === 'PASS' ? '✅ Ready to publish' : verdict === 'WARN' ? '⚠️ Consider fixing' : '❌ Don\'t publish yet'}</span>`;
   html += `<span style="color:#8b9cb5;font-size:13px;margin-left:10px">${d.name} · ${d.sizeMB.toFixed(1)}MB · ${fail} fail / ${warn} warn</span></div>`;
 
-  html += `<div class="cards"><div class="card"><h3>📐 基础规格</h3><table>`;
-  const rows = [['分辨率', `${d.w}x${d.h}`], ['方向', d.h > d.w ? '竖屏 ✓' : '横屏'], ['时长', d.dur.toFixed(1) + 's'], ['大小', d.sizeMB.toFixed(1) + 'MB'], ['格式', d.type]];
+  html += `<div class="cards"><div class="card"><h3>📐 Basics</h3><table>`;
+  const rows = [['Resolution', `${d.w}x${d.h}`], ['Orientation', d.h > d.w ? 'Vertical ✓' : 'Landscape'], ['Duration', d.dur.toFixed(1) + 's'], ['Size', d.sizeMB.toFixed(1) + 'MB'], ['Format', d.type]];
   rows.forEach(([k, v]) => html += `<tr><td>${k}</td><td>${v}</td></tr>`);
   html += `</table></div>`;
 
-  html += `<div class="card"><h3>🔍 体检项（${issues.length}）</h3>`;
-  if (!issues.length) html += `<div style="color:#4ade80">全部通过 🎉</div>`;
+  html += `<div class="card"><h3>🔍 Checks (${issues.length})</h3>`;
+  if (!issues.length) html += `<div style="color:#4ade80">All checks passed 🎉</div>`;
   issues.forEach(i => {
     html += `<div class="issue"><span class="lvl ${i.lvl}">${i.lvl}</span>`;
-    html += `<div><div class="det">${i.item}：${i.det}</div>`;
+    html += `<div><div class="det">${i.item}: ${i.det}</div>`;
     if (i.fix) html += `<div class="fix">→ ${i.fix}</div>`;
     html += `</div></div>`;
   });
