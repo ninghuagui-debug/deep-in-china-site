@@ -214,8 +214,8 @@ function render(d) {
   }
   if (d.sharp && d.sharp.ok) {
     const s = d.sharp.score;
-    if (s < 4) issues.push({ lvl: 'WARN', item: 'Sharpness', det: `Score ${s} — possibly blurry`, fix: 'Check source quality / export bitrate' });
-    else if (s < 8) issues.push({ lvl: 'INFO', item: 'Sharpness', det: `Score ${s} — acceptable`, fix: '' });
+    if (s < 3) issues.push({ lvl: 'WARN', item: 'Sharpness', det: `Score ${s} — low edge detail, video may be soft`, fix: 'Check source quality / export bitrate' });
+    else if (s < 8) issues.push({ lvl: 'INFO', item: 'Sharpness', det: `Score ${s} — low edge detail (may be shallow depth of field / smooth scenes, not necessarily blurry)`, fix: '' });
   }
   const fail = issues.filter(i => i.lvl === 'FAIL').length;
   const warn = issues.filter(i => i.lvl === 'WARN').length;
