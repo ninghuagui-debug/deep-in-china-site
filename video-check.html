@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Free Video Health Check — Pre-Publish Checker | Deep in China</title>
-<meta name="description" content="Free video pre-publish health check: resolution, orientation, duration, size. 100% local browser analysis — your video never leaves your device.">
-<meta name="keywords" content="video health check, video pre-publish check, video quality check, vertical video check, shorts check, 视频体检">
+<meta name="description" content="Free video pre-publish health check: resolution, orientation, duration, size, loudness, sharpness. 100% local browser analysis — your video never leaves your device.">
+<meta name="keywords" content="video health check, video pre-publish check, video loudness check, video quality check, vertical video check, shorts check, 视频体检">
 <link rel="canonical" href="https://ninghuagui-debug.github.io/deep-in-china-site/video-check.html">
 <meta property="og:title" content="Free Video Health Check — Pre-Publish Checker">
-<meta property="og:description" content="Check resolution, orientation, duration and size before you publish. 100% local, nothing uploaded.">
+<meta property="og:description" content="Check resolution, orientation, duration, size, loudness and sharpness before you publish. 100% local, nothing uploaded.">
 <meta name="twitter:card" content="summary_large_image">
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
@@ -62,7 +62,7 @@
 </div>
 <div class="wrap">
   <h1>🎬 Free Video Health Check</h1>
-  <div class="sub">Pre-publish check: resolution / orientation / duration / size — 100% local browser analysis, your video is never uploaded</div>
+  <div class="sub">Pre-publish check: resolution / orientation / duration / size / <b>loudness</b> / <b>sharpness</b> — 100% local browser analysis, your video is never uploaded</div>
 
   <div class="drop" id="drop">
     <div class="big">Click or drag a video here</div>
@@ -70,7 +70,7 @@
     <input type="file" id="file" accept="video/*">
   </div>
 
-  <div class="busy" id="busy"><div class="spinner"></div><div>Reading video metadata...</div></div>
+  <div class="busy" id="busy"><div class="spinner"></div><div>Analyzing video (metadata + loudness + sharpness)...</div></div>
 
   <div id="result"></div>
   <div id="err" class="err"></div>
@@ -100,16 +100,99 @@ function analyze(file) {
   drop.style.display = 'none'; busy.style.display = 'block';
   const url = URL.createObjectURL(file);
   const v = document.createElement('video');
-  v.preload = 'metadata';
+  v.preload = 'auto';
+  v.muted = true;
   v.src = url;
   const done = () => { URL.revokeObjectURL(url); busy.style.display = 'none'; drop.style.display = 'block'; };
-  v.onloadedmetadata = () => {
-    const w = v.videoWidth, h = v.videoHeight, dur = v.duration, sizeMB = file.size / 1024 / 1024;
-    render({ w, h, dur, sizeMB, name: file.name, type: file.type || 'unknown' });
+
+  v.onloadedmetadata = async () => {
+    try {
+      const w = v.videoWidth, h = v.videoHeight, dur = v.duration, sizeMB = file.size / 1024 / 1024;
+      const loud = await measureLoudness(file);          // WebAudio 响度
+      const sharp = await measureSharpness(v, dur);       // Canvas 清晰度
+      render({ w, h, dur, sizeMB, name: file.name, type: file.type || 'unknown', loud, sharp });
+    } catch (e) {
+      errBox.textContent = '❌ Analysis failed: ' + e.message;
+      errBox.style.display = 'block';
+    }
     done();
   };
   v.onerror = () => { errBox.textContent = '❌ Cannot read this video (unsupported format or corrupt file)'; errBox.style.display = 'block'; done(); };
-  setTimeout(() => { if (v.readyState < 1) { errBox.textContent = '❌ Read timeout — try another browser or format'; errBox.style.display = 'block'; done(); } }, 15000);
+  setTimeout(() => { if (v.readyState < 1) { errBox.textContent = '❌ Read timeout — try another browser or format'; errBox.style.display = 'block'; done(); } }, 20000);
+}
+
+/* 音量：WebAudio 解码 → RMS → 近似 LUFS（-14 目标） */
+function measureLoudness(file) {
+  return new Promise((resolve, reject) => {
+    try {
+      const ctx = new (window.AudioContext || window.webkitAudioContext)();
+      const reader = new FileReader();
+      reader.onload = async () => {
+        try {
+          const buf = await ctx.decodeAudioData(reader.result);
+          const ch = buf.getChannelData(0);
+          // 抽样 5 万点算 RMS（避免大文件全量计算）
+          const step = Math.max(1, Math.floor(ch.length / 50000));
+          let sum = 0, n = 0;
+          for (let i = 0; i < ch.length; i += step) { sum += ch[i] * ch[i]; n++; }
+          const rms = Math.sqrt(sum / n);
+          const lufs = Math.max(-50, 20 * Math.log10(rms + 1e-9)); // 近似
+          ctx.close();
+          resolve({ ok: true, lufs: Math.round(lufs * 10) / 10 });
+        } catch (e) { ctx.close(); reject(new Error('audio decode: ' + e.message)); }
+      };
+      reader.onerror = () => reject(new Error('file read failed'));
+      reader.readAsArrayBuffer(file);
+    } catch (e) { reject(e); }
+  });
+}
+
+/* 画质：取 3 帧转 canvas → 拉普拉斯方差（越高越清晰） */
+function measureSharpness(video, dur) {
+  return new Promise((resolve) => {
+    try {
+      const canvas = document.createElement('canvas');
+      const ctx = canvas.getContext('2d', { willReadFrequently: true });
+      const times = [0.2, 0.5, 0.8].map(f => Math.min(dur * f, dur - 0.1));
+      let scores = [];
+      let i = 0;
+      const sample = () => {
+        if (i >= times.length) {
+          if (!scores.length) return resolve({ ok: false, detail: 'no frames' });
+          const avg = scores.reduce((a, b) => a + b, 0) / scores.length;
+          resolve({ ok: true, score: Math.round(avg) });
+          return;
+        }
+        video.currentTime = times[i];
+        video.onseeked = () => {
+          try {
+            canvas.width = video.videoWidth; canvas.height = video.videoHeight;
+            ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+            const data = ctx.getImageData(0, 0, Math.min(canvas.width, 640), Math.min(canvas.height, 640)).data;
+            // 简化拉普拉斯：相邻像素亮度差绝对值
+            const W = Math.min(canvas.width, 640), H = Math.min(canvas.height, 640);
+            let sum = 0, cnt = 0;
+            for (let y = 1; y < H - 1; y += 3) {
+              for (let x = 1; x < W - 1; x += 3) {
+                const idx = (y * W + x) * 4;
+                const l = 0.299 * data[idx] + 0.587 * data[idx + 1] + 0.114 * data[idx + 2];
+                const idxL = ((y - 1) * W + x) * 4;
+                const idxR = ((y + 1) * W + x) * 4;
+                const lL = 0.299 * data[idxL] + 0.587 * data[idxL + 1] + 0.114 * data[idxL + 2];
+                const lR = 0.299 * data[idxR] + 0.587 * data[idxR + 1] + 0.114 * data[idxR + 2];
+                sum += Math.abs(l - lL) + Math.abs(l - lR);
+                cnt += 2;
+              }
+            }
+            scores.push(sum / cnt);
+            i++;
+            sample();
+          } catch (e) { i++; sample(); }
+        };
+      };
+      sample();
+    } catch (e) { resolve({ ok: false, detail: e.message }); }
+  });
 }
 
 function render(d) {
@@ -123,6 +206,17 @@ function render(d) {
   }
   if (d.dur > 60) issues.push({ lvl: 'WARN', item: 'Duration', det: `${d.dur.toFixed(0)}s > 60s (Shorts limit)`, fix: 'Trim under 60s' });
   if (d.sizeMB > 200) issues.push({ lvl: 'WARN', item: 'File size', det: `${d.sizeMB.toFixed(1)}MB is large`, fix: 'Compress export' });
+  if (d.loud && d.loud.ok) {
+    const l = d.loud.lufs;
+    if (l > -10) issues.push({ lvl: 'FAIL', item: 'Loudness', det: `${l} LUFS — too loud, platforms will auto-duck`, fix: 'Reduce volume, target -14 LUFS' });
+    else if (l < -24) issues.push({ lvl: 'WARN', item: 'Loudness', det: `${l} LUFS — very quiet`, fix: 'Boost volume toward -14 LUFS' });
+    else if (Math.abs(l + 14) > 5) issues.push({ lvl: 'INFO', item: 'Loudness', det: `${l} LUFS (target -14)`, fix: '' });
+  }
+  if (d.sharp && d.sharp.ok) {
+    const s = d.sharp.score;
+    if (s < 4) issues.push({ lvl: 'WARN', item: 'Sharpness', det: `Score ${s} — possibly blurry`, fix: 'Check source quality / export bitrate' });
+    else if (s < 8) issues.push({ lvl: 'INFO', item: 'Sharpness', det: `Score ${s} — acceptable`, fix: '' });
+  }
   const fail = issues.filter(i => i.lvl === 'FAIL').length;
   const warn = issues.filter(i => i.lvl === 'WARN').length;
   const verdict = fail ? 'FAIL' : (warn ? 'WARN' : 'PASS');
@@ -132,6 +226,8 @@ function render(d) {
 
   html += `<div class="cards"><div class="card"><h3>📐 Basics</h3><table>`;
   const rows = [['Resolution', `${d.w}x${d.h}`], ['Orientation', d.h > d.w ? 'Vertical ✓' : 'Landscape'], ['Duration', d.dur.toFixed(1) + 's'], ['Size', d.sizeMB.toFixed(1) + 'MB'], ['Format', d.type]];
+  if (d.loud && d.loud.ok) rows.push(['Loudness', d.loud.lufs + ' LUFS']);
+  if (d.sharp && d.sharp.ok) rows.push(['Sharpness', String(d.sharp.score)]);
   rows.forEach(([k, v]) => html += `<tr><td>${k}</td><td>${v}</td></tr>`);
   html += `</table></div>`;
 
