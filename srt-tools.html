@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free SRT Subtitle Toolkit — Shift / Merge / Split / Extract Text | Deep in China</title>
+<meta name="description" content="Free SRT subtitle batch toolkit: shift the time axis by +/- seconds, merge multiple SRT files with auto time衔接, split long captions by duration, and convert SRT to plain text. 100% local browser — your files never leave your device.">
+<meta name="keywords" content="srt tool, srt shift, shift subtitle time, merge srt, split subtitle, srt to text, 字幕工具, 字幕偏移, 字幕合并, 字幕分割">
+<link rel="canonical" href="https://ninghuagui-debug.github.io/deep-in-china-site/srt-tools.html">
+<meta property="og:title" content="Free SRT Subtitle Toolkit — Shift / Merge / Split / Extract">
+<meta property="og:description" content="Shift time axis, merge SRT files, split long captions, extract plain text. 100% local, nothing uploaded.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ninghuagui-debug.github.io/deep-in-china-site/srt-tools.html">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background:#0f1b2d; color:#e6ecf5; min-height:100vh; }
+  .topbar { background:#0a1422; border-bottom:1px solid #1c2a42; padding:10px 0; }
+  .topbar .wrap { display:flex; justify-content:space-between; align-items:center; padding:0 20px; max-width:900px; margin:0 auto; }
+  .logo { color:#c9a86a; font-weight:600; font-size:15px; text-decoration:none; font-family:'Playfair Display', Georgia, serif; }
+  .yt-link { color:#9fb3d1; font-size:13px; text-decoration:none; border:1px solid #2a3a58; padding:5px 14px; border-radius:20px; transition:.2s; }
+  .yt-link:hover { border-color:#c9a86a; color:#c9a86a; }
+  .wrap { max-width:900px; margin:0 auto; padding:28px 20px; }
+  h1 { font-size:24px; margin-bottom:6px; font-family:'Playfair Display', Georgia, serif; }
+  .sub { color:#8b9cb5; margin-bottom:24px; font-size:14px; line-height:1.5; }
+  .card { background:#111d31; border:1px solid #1f2f4d; border-radius:12px; padding:18px 20px; margin-bottom:18px; }
+  .card h3 { font-size:15px; color:#c9a86a; margin-bottom:4px; }
+  .card .desc { color:#8b9cb5; font-size:13px; margin-bottom:12px; line-height:1.45; }
+  .row { display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-bottom:10px; }
+  .filebtn { background:#0a1422; border:1px solid #2a3a58; color:#9fb3d1; padding:7px 14px; border-radius:8px; font-size:13px; cursor:pointer; transition:.2s; }
+  .filebtn:hover { border-color:#c9a86a; color:#c9a86a; }
+  input[type=file]{ display:none; }
+  .param { display:flex; align-items:center; gap:8px; font-size:13px; color:#a9b8cf; }
+  .param input { background:#0a1422; border:1px solid #2a3a58; color:#e6ecf5; border-radius:6px; padding:6px 10px; width:96px; font-size:13px; }
+  .param select { background:#0a1422; border:1px solid #2a3a58; color:#e6ecf5; border-radius:6px; padding:6px 8px; font-size:13px; }
+  .btn { background:#c9a86a; color:#0f1b2d; border:none; padding:9px 20px; border-radius:8px; font-weight:600; cursor:pointer; font-size:14px; transition:.2s; }
+  .btn:hover { background:#d8b97e; }
+  textarea { width:100%; min-height:130px; background:#0a1422; border:1px solid #2a3a58; color:#c8d3e2; border-radius:10px; padding:12px; font-family:'SFMono-Regular',Consolas,monospace; font-size:12.5px; line-height:1.5; resize:vertical; }
+  .out { min-height:130px; }
+  .outrow { display:flex; align-items:center; gap:12px; margin-top:10px; flex-wrap:wrap; }
+  .dl { background:#0a1422; border:1px solid #2a3a58; color:#9fb3d1; padding:7px 16px; border-radius:8px; font-size:13px; cursor:pointer; transition:.2s; text-decoration:none; }
+  .dl:hover { border-color:#c9a86a; color:#c9a86a; }
+  .msg { font-size:12.5px; color:#8b9cb5; margin-top:8px; }
+  .msg.ok { color:#4ade80; }
+  .msg.warn { color:#facc15; }
+  .msg.err { color:#f87171; }
+  .privacy { color:#5c6a82; font-size:12px; margin-top:8px; text-align:center; }
+  .foot { color:#46536b; font-size:12px; margin-top:26px; text-align:center; border-top:1px solid #1a2840; padding-top:16px; }
+  .foot a { color:#7aa2ff; text-decoration:none; }
+  .hint { color:#5c6a82; font-size:12px; }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="wrap">
+    <a class="logo" href="./">Deep in China</a>
+    <a class="yt-link" href="https://www.youtube.com/@deepinchina-n" target="_blank" rel="noopener">▶ Watch Deep in China on YouTube</a>
+  </div>
+</div>
+<div class="wrap">
+  <h1>📝 Free SRT Subtitle Toolkit</h1>
+  <div class="sub">Four local-only batch tools for subtitle files — <b>shift time axis</b>, <b>merge multiple SRT</b>, <b>split long captions</b>, <b>extract plain text</b>. Everything runs in your browser; your files are never uploaded.</div>
+
+  <!-- 1. SHIFT -->
+  <div class="card">
+    <h3>1 · Shift Time Axis</h3>
+    <div class="desc">Add or subtract a fixed number of seconds to every timestamp. Use when audio and subtitle drift apart. Negative values that push start below 0 are clamped to 00:00:00,000.</div>
+    <div class="row">
+      <label class="filebtn" for="f1">📂 Choose .srt</label><input type="file" id="f1" accept=".srt,text/plain">
+      <div class="param">Offset (sec) <input type="number" id="p1" value="-0.5" step="0.1"></div>
+      <button class="btn" onclick="doShift()">Shift</button>
+    </div>
+    <textarea id="t1" placeholder="Paste SRT here, or choose a file above…"></textarea>
+    <div class="outrow"><button class="dl" id="d1" style="display:none" onclick="dl('d1')">⬇ Download .srt</button><span class="msg" id="m1"></span></div>
+  </div>
+
+  <!-- 2. MERGE -->
+  <div class="card">
+    <h3>2 · Merge Multiple SRT</h3>
+    <div class="desc">Select two or more .srt files (processed top-to-bottom in the order you pick them). Each file's timeline is auto-continued after the previous one ends, with an optional gap between parts.</div>
+    <div class="row">
+      <label class="filebtn" for="f2">📂 Choose multiple .srt</label><input type="file" id="f2" accept=".srt,text/plain" multiple>
+      <div class="param">Gap (sec) <input type="number" id="p2" value="0" step="0.1" min="0"></div>
+      <button class="btn" onclick="doMerge()">Merge</button>
+    </div>
+    <textarea id="t2" class="out" placeholder="Merged SRT appears here after you pick files and click Merge…" readonly></textarea>
+    <div class="outrow"><button class="dl" id="d2" style="display:none" onclick="dl('d2')">⬇ Download .srt</button><span class="msg" id="m2"></span></div>
+  </div>
+
+  <!-- 3. SPLIT -->
+  <div class="card">
+    <h3>3 · Split Long Captions by Duration</h3>
+    <div class="desc">Break any caption longer than the max duration into evenly-timed shorter lines (text is split proportionally, breaking at spaces when possible). Great for readability on fast-paced shorts.</div>
+    <div class="row">
+      <label class="filebtn" for="f3">📂 Choose .srt</label><input type="file" id="f3" accept=".srt,text/plain">
+      <div class="param">Max dur (sec) <input type="number" id="p3" value="2" step="0.5" min="0.2"></div>
+      <button class="btn" onclick="doSplit()">Split</button>
+    </div>
+    <textarea id="t3" placeholder="Paste SRT here, or choose a file above…"></textarea>
+    <div class="outrow"><button class="dl" id="d3" style="display:none" onclick="dl('d3')">⬇ Download .srt</button><span class="msg" id="m3"></span></div>
+  </div>
+
+  <!-- 4. TO TEXT -->
+  <div class="card">
+    <h3>4 · SRT → Plain Text</h3>
+    <div class="desc">Strip all timing and indices, keep only the caption text. Join captions with a blank line (or a space) for transcripts / copy-paste.</div>
+    <div class="row">
+      <label class="filebtn" for="f4">📂 Choose .srt</label><input type="file" id="f4" accept=".srt,text/plain">
+      <div class="param">Join with
+        <select id="p4"><option value="blank">blank line</option><option value="space">space</option><option value="newline">newline</option></select>
+      </div>
+      <button class="btn" onclick="doText()">Extract</button>
+    </div>
+    <textarea id="t4" class="out" placeholder="Plain text appears here…" readonly></textarea>
+    <div class="outrow"><button class="dl" id="d4" style="display:none" onclick="dl('d4')">⬇ Download .txt</button><span class="msg" id="m4"></span></div>
+  </div>
+
+  <div class="privacy">🔒 All processing happens locally in your browser — no file is ever sent to a server</div>
+
+  <div class="foot">
+    <a href="./">Deep in China</a> · Go deeper than any tourist · <a href="https://www.youtube.com/@deepinchina-n" target="_blank" rel="noopener">YouTube Channel</a>
+  </div>
+</div>
+
+<script>
+/* ---------- SRT core ---------- */
+function hmsToMs(h,m,s,ms){ return ((h*3600+m*60+s)*1000)+ms; }
+function msToTC(ms){
+  if (ms<0) ms=0;
+  const h=Math.floor(ms/3600000), m=Math.floor((ms%3600000)/60000),
+        s=Math.floor((ms%60000)/1000), msPart=Math.floor(ms%1000);
+  const p=n=>String(n).padStart(2,'0'), pp=n=>String(n).padStart(3,'0');
+  return `${p(h)}:${p(m)}:${p(s)},${pp(msPart)}`;
+}
+const TC_RE = /(\d{1,2}):(\d{2}):(\d{2})[,\.](\d{1,3})\s*-->\s*(\d{1,2}):(\d{2}):(\d{2})[,\.](\d{1,3})/;
+function parseSRT(content){
+  content = content.replace(/\r\n?/g,'\n');
+  const blocks = content.split(/\n\s*\n/);
+  const subs = [];
+  for (const b of blocks){
+    const lines = b.split('\n').filter(l=>l.trim()!=='');
+    if (!lines.length) continue;
+    let i=0, idx=null;
+    if (/^\d+$/.test(lines[0].trim())){ idx=parseInt(lines[0].trim(),10); i=1; }
+    const m = (lines[i]||'').match(TC_RE);
+    if (!m) continue;
+    const start = hmsToMs(+m[1],+m[2],+m[3],+m[4]);
+    const end   = hmsToMs(+m[5],+m[6],+m[7],+m[8]);
+    i++;
+    const text = lines.slice(i).join('\n');
+    subs.push({ idx: idx==null ? subs.length+1 : idx, start, end, text });
+  }
+  return subs;
+}
+function buildSRT(subs){
+  return subs.map((s,i)=>{
+    const idx = s.idx==null ? (i+1) : s.idx;
+    return `${idx}\n${msToTC(s.start)} --> ${msToTC(s.end)}\n${s.text}`;
+  }).join('\n\n') + '\n';
+}
+
+/* ---------- features ---------- */
+function shiftSubs(subs, deltaSec){
+  const d = deltaSec*1000;
+  let clamped=0;
+  subs.forEach(s=>{
+    s.start += d; s.end += d;
+    if (s.start < 0){ s.start = 0; clamped++; }
+    if (s.end   < 0){ s.end   = 0; }
+  });
+  subs.forEach((s,i)=> s.idx=i+1);
+  return clamped;
+}
+function mergeSubs(list, gapMs){
+  let cursor = 0, merged = [];
+  list.forEach(file=>{
+    file.subs.forEach(s=>{
+      merged.push({ start: s.start+cursor, end: s.end+cursor, text: s.text });
+    });
+    const lastEnd = file.subs.length ? file.subs[file.subs.length-1].end : 0;
+    cursor = lastEnd + cursor + gapMs;
+  });
+  merged.forEach((s,i)=> s.idx=i+1);
+  return merged;
+}
+function splitSubs(subs, maxDurSec){
+  const max = maxDurSec*1000;
+  const out = [];
+  subs.forEach(s=>{
+    const dur = s.end - s.start;
+    if (dur <= max || dur <= 0){ out.push(s); return; }
+    const n = Math.ceil(dur/max);
+    const segDur = dur/n;
+    const chars = Array.from(s.text);
+    let pos = 0;
+    for (let k=0;k<n;k++){
+      const segStart = s.start + k*segDur;
+      const segEnd = (k===n-1) ? s.end : s.start + (k+1)*segDur;
+      let take = Math.max(1, Math.round(chars.length/n));
+      let end;
+      if (k === n-1) {
+        end = chars.length;            // 末段强制取到文本末尾，避免丢字
+      } else {
+        end = Math.min(pos+take, chars.length);
+        if (end < chars.length){
+          let sp = -1;
+          for (let j=end;j>pos;j--){ if (/\s/.test(chars[j])){ sp=j; break; } }
+          if (sp > pos) end = sp;
+        }
+      }
+      const segText = chars.slice(pos,end).join('').trim();
+      pos = end;
+      if (segText) out.push({ start: segStart, end: segEnd, text: segText });
+    }
+  });
+  out.forEach((s,i)=> s.idx=i+1);
+  return out;
+}
+function subsToText(subs, mode){
+  const joiner = mode==='space' ? ' ' : (mode==='newline' ? '\n' : '\n\n');
+  return subs.map(s=>s.text.trim()).join(joiner) + '\n';
+}
+
+/* ---------- IO helpers ---------- */
+function readFile(input, ta){
+  const f = input.files[0];
+  if (!f) return;
+  const r = new FileReader();
+  r.onload = () => { ta.value = r.result; };
+  r.readAsText(f, 'utf-8');
+}
+function download(name, content, mime){
+  const blob = new Blob([content], { type: mime||'text/plain;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = name; document.body.appendChild(a); a.click();
+  setTimeout(()=>{ document.body.removeChild(a); URL.revokeObjectURL(url); }, 1000);
+}
+const outputs = { d1:null, d2:null, d3:null, d4:null };
+function dl(id){
+  const o = outputs[id];
+  if (o) download(o.name, o.content, o.mime);
+}
+function setMsg(id, text, cls){
+  const el = document.getElementById(id);
+  el.textContent = text; el.className = 'msg' + (cls? ' '+cls : '');
+}
+
+/* ---------- wire up ---------- */
+document.getElementById('f1').addEventListener('change', e=> readFile(e.target, document.getElementById('t1')));
+document.getElementById('f3').addEventListener('change', e=> readFile(e.target, document.getElementById('t3')));
+document.getElementById('f4').addEventListener('change', e=> readFile(e.target, document.getElementById('t4')));
+
+function doShift(){
+  const ta=document.getElementById('t1'), out=document.getElementById('d1');
+  const subs=parseSRT(ta.value);
+  if(!subs.length){ setMsg('m1','No valid SRT found.','err'); out.style.display='none'; return; }
+  const delta=parseFloat(document.getElementById('p1').value)||0;
+  const clamped=shiftSubs(subs,delta);
+  const res=buildSRT(subs);
+  ta.value=res; outputs.d1={name:'shifted.srt',content:res,mime:'text/plain;charset=utf-8'};
+  out.style.display='inline-block';
+  setMsg('m1', `${subs.length} cues shifted by ${delta}s` + (clamped? ` · ${clamped} start clamped to 0`:''), 'ok');
+}
+function doMerge(){
+  const input=document.getElementById('f2'), ta=document.getElementById('t2'), out=document.getElementById('d2');
+  if(!input.files.length){ setMsg('m2','Pick at least two .srt files.','err'); out.style.display='none'; return; }
+  const gapMs=(parseFloat(document.getElementById('p2').value)||0)*1000;
+  const list=[];
+  for(const f of input.files){
+    list.push({ name:f.name, content:null });
+  }
+  // read all files then merge
+  let done=0;
+  list.forEach((item,i)=>{
+    const r=new FileReader();
+    r.onload=()=>{
+      item.content=r.result;
+      if(++done===list.length){
+        const parsed=list.map(it=>({ subs: parseSRT(it.content) })).filter(x=>x.subs.length);
+        if(parsed.length<1){ setMsg('m2','No valid SRT among files.','err'); out.style.display='none'; return; }
+        const merged=mergeSubs(parsed, gapMs);
+        const res=buildSRT(merged);
+        ta.value=res; outputs.d2={name:'merged.srt',content:res,mime:'text/plain;charset=utf-8'};
+        out.style.display='inline-block';
+        setMsg('m2', `${parsed.length} files merged → ${merged.length} cues` + (gapMs? ` (${gapMs/1000}s gap)`:''), 'ok');
+      }
+    };
+    r.readAsText(item.file=f, 'utf-8');
+  });
+}
+function doSplit(){
+  const ta=document.getElementById('t3'), out=document.getElementById('d3');
+  const subs=parseSRT(ta.value);
+  if(!subs.length){ setMsg('m3','No valid SRT found.','err'); out.style.display='none'; return; }
+  const max=Math.max(0.2, parseFloat(document.getElementById('p3').value)||2);
+  const before=subs.length;
+  const out2=splitSubs(subs,max);
+  const res=buildSRT(out2);
+  ta.value=res; outputs.d3={name:'split.srt',content:res,mime:'text/plain;charset=utf-8'};
+  out.style.display='inline-block';
+  setMsg('m3', `${before} → ${out2.length} cues (max ${max}s each)`, 'ok');
+}
+function doText(){
+  const ta=document.getElementById('t4'), out=document.getElementById('d4');
+  const subs=parseSRT(ta.value);
+  if(!subs.length){ setMsg('m4','No valid SRT found.','err'); out.style.display='none'; return; }
+  const mode=document.getElementById('p4').value;
+  const res=subsToText(subs,mode);
+  ta.value=res; outputs.d4={name:'subtitles.txt',content:res,mime:'text/plain;charset=utf-8'};
+  out.style.display='inline-block';
+  setMsg('m4', `${subs.length} cues → ${res.length} chars of plain text`, 'ok');
+}
+</script>
+</body>
+</html>
